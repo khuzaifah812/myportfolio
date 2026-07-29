@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Khuzaifah | Web Developer</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="portfolio.css">
+
+    <!-- EmailJS -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+
+<body>
+
+    <!-- ================= LOADER ================= -->
+
+    <div id="loader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+
+        <div class="container">
+
+            <a class="navbar-brand fw-bold" href="#">
+                KamCoder
+            </a>
+
+            <button class="navbar-toggler"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbar">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <div class="collapse navbar-collapse"
+                id="navbar">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link">About</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#skills" class="nav-link">Skills</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#services" class="nav-link">Services</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#projects" class="nav-link">Projects</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">Contact</a>
+                    </li>
+
+                </ul>
+
+                <!-- Dark Mode Button -->
+
+                <button id="themeBtn"
+                    class="btn btn-outline-light ms-lg-3">
+
+                    <i class="bi bi-moon-stars"></i>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <!-- ================= HERO SECTION ================= -->
+
+    <section id="home"
+        class="hero">
+
+        <div class="container">
+
+            <div class="row align-items-center">
+
+                <div class="col-lg-6">
+
+                    <h4>Hello 👋 I'm</h4>
+
+                    <h1>
+                        Khuzaifah 
+                    </h1>
+
+                    <h2>
+
+                        <span id="typing"></span>
+
+                    </h2>
+
+                    <p>
+
+                        I build modern, responsive and user-friendly websites
+                        using HTML, CSS, JavaScript, Bootstrap and Python.
+
+                    </p>
+
+                    <a href="#projects"
+                        class="btn btn-primary btn-lg">
+
+                        View Projects
+
+                    </a>
+
+                    <a href="Resume.pdf"
+                        class="btn btn-outline-light btn-lg ms-3"
+                        download>
+
+                        Download Resume
+
+                    </a>
+
+                </div>
+
+                <div class="col-lg-6 text-center">
+
+                    <img src="pic.jpg"
+                        class="img-fluid profile-image"
+                        alt="Profile">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+
+    <section id="about">
+
+        <div class="container">
+
+            <h2 class="section-title">
+
+                About Me
+
+            </h2>
+
+            <div class="row">
+
+                <div class="col-lg-5">
+
+                    <img src="pic.jpg"
+                        class="img-fluid rounded shadow">
+
+                </div>
+
+                <div class="col-lg-7">
+
+                    <h3>Who am I?</h3>
+
+                    <p>
+
+                        I am a Diploma in Software Engineering student at UICT
+                        and an aspiring full-stack web developer. I enjoy
+                        building responsive websites, learning new technologies,
+                        and solving real-world problems through code.
+
+                    </p>
+
+                    <div class="row mt-4">
+
+                        <div class="col-md-6">
+
+                            <ul>
+
+                                <li><strong>Name:</strong> Khuzaifah</li>
+
+                                <li><strong>Country:</strong> Uganda</li>
+
+                                <li><strong>Education:</strong> Diploma in Software Engineering</li>
+                                <li><strong>Email:</strong> khuzaifah812@email.com</li>
+                                <li><strong>Email:</strong> khuzaifah812@email.com</li>
+                                <li><strong>Email:</strong> khuzaifah812@email.com</li>
+                                <li><strong>Email:</strong> khuzaifah812@email.com</li>
+                                <li><strong>Email:</strong> khuzaifah812@email.com</li>
+                                <li><strong>Email:</strong> khuzaifah812@email.com</li>
+                                <li><strong>Email:</strong> khuzaifah812@email.com</li>
+                                <li><strong>Email:</strong> khuzaifah812@email.com</li>
+                                <li><strong>Experience:</strong> Student Developer</li>
+
+
+
+                            </ul>
+
+                        </div>
+
+                        
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= SKILLS ================= -->
+
+    <section id="skills">
+
+        <div class="container">
+
+            <h2 class="section-title">
+
+                Skills
+
+            </h2>
+
+            <div class="row g-4">
+
+                <div class="col-md-3">
+
+                    <div class="skill-card">
+
+                        <i class="bi bi-filetype-html"></i>
+
+                        <h4>HTML5</h4>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-3">
+
+                    <div class="skill-card">
+
+                        <i class="bi bi-filetype-css"></i>
+
+                        <h4>CSS3</h4>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-3">
+
+                    <div class="skill-card">
+
+                        <i class="bi bi-filetype-js"></i>
+
+                        <h4>JavaScript</h4>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-3">
+
+                    <div class="skill-card">
+
+                        <i class="bi bi-bootstrap"></i>
+
+                        <h4>Bootstrap</h4>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-3">
+
+                    <div class="skill-card">
+
+                        <i class="bi bi-filetype-py"></i>
+
+                        <h4>Python</h4>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-3">
+
+                    <div class="skill-card">
+
+                        <i class="bi bi-server"></i>
+
+                        <h4>Django</h4>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-3">
+
+                    <div class="skill-card">
+
+                        <i class="bi bi-database"></i>
+
+                        <h4>MySQL</h4>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-3">
+
+                    <div class="skill-card">
+
+                        <i class="bi bi-github"></i>
+
+                        <h4>GitHub</h4>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= SERVICES ================= -->
+
+    <section id="services">
+
+        <div class="container">
+
+            <h2 class="section-title">
+
+                Services
+
+            </h2>
+
+            <div class="row g-4">
+
+                <div class="col-lg-4">
+
+                    <div class="service-card">
+
+                        <i class="bi bi-laptop"></i>
+
+                        <h4>Web Development</h4>
+
+                        <p>
+
+                            Responsive websites using modern technologies.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-4">
+
+                    <div class="service-card">
+
+                        <i class="bi bi-phone"></i>
+
+                        <h4>Responsive Design</h4>
+
+                        <p>
+
+                            Mobile-first layouts for all screen sizes.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-4">
+
+                    <div class="service-card">
+
+                        <i class="bi bi-code-slash"></i>
+
+                        <h4>Backend Development</h4>
+
+                        <p>
+
+                            Django, Python and MySQL web applications.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= PROJECTS ================= -->
+
+    <section id="projects">
+
+        <div class="container">
+
+            <h2 class="section-title">
+
+                Projects
+
+            </h2>
+
+            <div class="row g-4">
+
+                <!-- Project -->
+
+                <div class="col-lg-4">
+
+                    <div class="card project-card">
+
+                        <img src="portfolio.png"
+                            class="card-img-top">
+
+                        <div class="card-body">
+
+                            <h4>Portfolio Website</h4>
+
+                            <p>
+
+                                Personal portfolio built using HTML, CSS,
+                                Bootstrap and JavaScript.
+
+                            </p>
+
+                            <a href="portfolio.html"
+                                class="btn btn-primary">
+
+                                Live Demo
+
+                            </a>
+
+                            <a href="#"
+                                class="btn btn-dark">
+
+                                GitHub
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Project -->
+
+
+                <div class="col-lg-4">
+
+                    <div class="card project-card">
+
+                        <img src="school.png"
+                            class="card-img-top">
+
+                        <div class="card-body">
+
+                            <h4>Library Management System</h4>
+
+                            <p>
+
+                                UICT Library Management System using Django.
+
+                            </p>
+
+                            <a href="#"
+                                class="btn btn-primary">
+
+                                Live Demo
+
+                            </a>
+
+                            <a href="#"
+                                class="btn btn-dark">
+
+                                GitHub
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Project -->
+                 
+                <div class="col-lg-4">
+
+                    <div class="card project-card">
+
+                        <img src="portfolio.png"
+                            class="card-img-top">
+
+                        <div class="card-body">
+
+                            <h4>Portfolio Website</h4>
+
+                            <p>
+
+                                Personal portfolio built using HTML, CSS,
+                                Bootstrap and JavaScript.
+
+                            </p>
+
+                            <a href="portfolio.html"
+                                class="btn btn-primary">
+
+                                Live Demo
+
+                            </a>
+
+                            <a href="#"
+                                class="btn btn-dark">
+
+                                GitHub
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!------------project-------->
+                
+                <div class="col-lg-4">
+
+                    <div class="card project-card">
+
+                        <img src="portfolio.png"
+                            class="card-img-top">
+
+                        <div class="card-body">
+
+                            <h4>Portfolio Website</h4>
+
+                            <p>
+
+                                Personal portfolio built using HTML, CSS,
+                                Bootstrap and JavaScript.
+
+                            </p>
+
+                            <a href="portfolio.html"
+                                class="btn btn-primary">
+
+                                Live Demo
+
+                            </a>
+
+                            <a href="#"
+                                class="btn btn-dark">
+
+                                GitHub
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-----project--------->
+
+                <div class="col-lg-4">
+
+                    <div class="card project-card">
+
+                        <img src="toDoList.png"
+                            class="card-img-top">
+
+                        <div class="card-body">
+
+                            <h4>Weather App</h4>
+
+                            <p>
+
+                                Weather application using JavaScript API.
+
+                            </p>
+
+                            <a href="#"
+                                class="btn btn-primary">
+
+                                Live Demo
+
+                            </a>
+
+                            <a href="#"
+                                class="btn btn-dark">
+
+                                GitHub
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= RESUME ================= -->
+
+    <section id="resume">
+
+        <div class="container text-center">
+
+            <h2>
+
+                Resume
+
+            </h2>
+
+            <p>
+
+                Download my latest resume below.
+
+            </p>
+
+            <a href="Resume.pdf"
+                download
+                class="btn btn-success btn-lg">
+
+                Download Resume
+
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+
+    <section id="contact">
+
+        <div class="container">
+
+            <h2 class="section-title">
+
+                Contact Me
+
+            </h2>
+<form id="contactForm">
+
+    <input name="from_name" class="form-control mb-3" type="text" placeholder="Full Name" required>
+
+    <input name="from_email" class="form-control mb-3" type="email" placeholder="Email Address" required>
+
+    <input name="subject" class="form-control mb-3" type="text" placeholder="Subject" required>
+
+    <textarea name="message" class="form-control mb-3" rows="6" placeholder="Message" required></textarea>
+
+    <button class="btn btn-primary" type="submit">
+        Send Message
+
+    </button>
+
+    <p id="formStatus" class="mt-2"></p>
+    
+</form>
+
+        </div>
+
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="container text-center">
+
+            <div class="social-icons mb-3">
+
+                <a href="#"><i class="bi bi-facebook"></i></a>
+
+                <a href="#"><i class="bi bi-instagram"></i></a>
+
+                <a href="#"><i class="bi bi-linkedin"></i></a>
+
+                <a href="#"><i class="bi bi-github"></i></a>
+
+            </div>
+
+            <p>
+
+                © 2026 Khuzaifah | All Rights Reserved.
+
+            </p>
+
+        </div>
+
+    </footer>
+
+    <!-- Scroll To Top -->
+
+    <button id="topBtn">
+
+        <i class="bi bi-arrow-up"></i>
+
+    </button>
+
+    <!-- Bootstrap JS -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JavaScript -->
+
+    <script src="portfolio.js"></script>
+
+</body>
+
+</html>
