@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aine Mbabazi Khuzaifah | Python Developer & Software Engineer</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* =========================================
+           GLOBAL VARIABLES & RESET
+           ========================================= */
+        :root {
+            --primary: #2563eb;
+            --primary-light: #eff6ff;
+            --text-dark: #0f172a;
+            --text-muted: #64748b;
+            --bg-main: #ffffff;
+            --bg-alt: #f8fafc;
+            --border: #e2e8f0;
+            --radius: 16px;
+            --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-main);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a { text-decoration: none; color: inherit; }
+        img { max-width: 100%; display: block; }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+        /* =========================================
+           NAVIGATION
+           ========================================= */
+        nav {
+            position: fixed; top: 0; left: 0; right: 0;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            z-index: 1000; transition: var(--transition);
+        }
+
+        .nav-container { display: flex; justify-content: space-between; align-items: center; height: 80px; }
+
+        .logo { font-size: 1.5rem; font-weight: 800; letter-spacing: -0.5px; }
+        .logo span { color: var(--primary); }
+
+        .nav-links { display: flex; gap: 32px; align-items: center; }
+        .nav-links a { font-size: 0.95rem; font-weight: 600; color: var(--text-muted); transition: var(--transition); }
+        .nav-links a:hover { color: var(--primary); }
+
+        .nav-btn {
+            background: var(--text-dark); color: white; padding: 10px 24px;
+            border-radius: 50px; font-weight: 600; font-size: 0.9rem; transition: var(--transition);
+        }
+        .nav-btn:hover { background: var(--primary); transform: translateY(-2px); }
+
+        /* =========================================
+           HERO SECTION
+           ========================================= */
+        .hero { padding: 160px 0 80px; text-align: center; position: relative; }
+        .hero::before {
+            content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+            width: 100%; height: 600px;
+            background: radial-gradient(circle at 50% 0%, rgba(37, 99, 235, 0.08) 0%, transparent 70%);
+            z-index: -1;
+        }
+
+        .hero-badge {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 6px 16px; background: var(--primary-light); color: var(--primary);
+            border-radius: 50px; font-size: 0.85rem; font-weight: 700; margin-bottom: 24px;
+        }
+
+        .hero h1 {
+            font-size: 4.5rem; font-weight: 800; line-height: 1.1;
+            letter-spacing: -2px; margin-bottom: 24px; max-width: 900px; margin-left: auto; margin-right: auto;
+        }
+        .hero h1 span { color: var(--primary); }
+        .hero p { font-size: 1.2rem; color: var(--text-muted); max-width: 600px; margin: 0 auto 40px; }
+
+        .hero-buttons { display: flex; gap: 16px; justify-content: center; margin-bottom: 60px; }
+        .btn-primary {
+            background: var(--primary); color: white; padding: 16px 32px; border-radius: 8px;
+            font-weight: 600; transition: var(--transition); display: flex; align-items: center; gap: 8px;
+        }
+        .btn-primary:hover { background: #1d4ed8; transform: translateY(-2px); box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2); }
+        
+        .btn-secondary {
+            background: white; color: var(--text-dark); padding: 16px 32px; border-radius: 8px;
+            font-weight: 600; border: 1px solid var(--border); transition: var(--transition); display: flex; align-items: center; gap: 8px;
+        }
+        .btn-secondary:hover { border-color: var(--text-dark); transform: translateY(-2px); }
+
+        .hero-image-wrapper {
+            max-width: 1000px; margin: 0 auto; border-radius: 20px; padding: 10px;
+            background: white; border: 1px solid var(--border); box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+        }
+        .hero-image-wrapper img { border-radius: 12px; width: 100%; height: auto; }
+
+        /* =========================================
+           TECH STACK
+           ========================================= */
+        .tech-strip { padding: 40px 0; border-bottom: 1px solid var(--border); text-align: center; }
+        .tech-strip p {
+            font-size: 0.85rem; font-weight: 700; text-transform: uppercase;
+            letter-spacing: 1px; color: var(--text-muted); margin-bottom: 24px;
+        }
+        .tech-icons { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; opacity: 0.6; }
+        .tech-icons i { font-size: 2.5rem; color: var(--text-dark); transition: var(--transition); }
+        .tech-icons i:hover { opacity: 1; color: var(--primary); transform: scale(1.1); }
+
+        /* =========================================
+           FEATURES / BENTO GRID
+           ========================================= */
+        .features-section { padding: 100px 0; background: var(--bg-alt); }
+        .section-header { text-align: center; margin-bottom: 60px; }
+        .section-header h2 { font-size: 2.5rem; font-weight: 800; letter-spacing: -1px; margin-bottom: 16px; }
+        .section-header p { color: var(--text-muted); font-size: 1.1rem; max-width: 600px; margin: 0 auto; }
+
+        .bento-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+        .bento-card {
+            background: white; border-radius: var(--radius); padding: 32px;
+            border: 1px solid var(--border); transition: var(--transition); display: flex; flex-direction: column;
+        }
+        .bento-card:hover { border-color: var(--primary); box-shadow: 0 20px 40px -10px rgba(37, 99, 235, 0.1); transform: translateY(-5px); }
+        .bento-card.large { grid-column: span 2; }
+
+        .card-icon {
+            width: 48px; height: 48px; background: var(--primary-light); color: var(--primary);
+            border-radius: 12px; display: flex; align-items: center; justify-content: center;
+            font-size: 1.5rem; margin-bottom: 24px;
+        }
+        .bento-card h3 { font-size: 1.3rem; font-weight: 700; margin-bottom: 12px; }
+        .bento-card p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 20px; flex-grow: 1; }
+
+        .project-image { width: 100%; height: 250px; object-fit: cover; border-radius: 12px; margin-bottom: 20px; border: 1px solid var(--border); }
+
+        .project-links { display: flex; gap: 16px; margin-top: auto; }
+        .project-links a {
+            font-size: 0.85rem; font-weight: 600; display: flex; align-items: center; gap: 6px;
+            color: var(--primary); transition: var(--transition);
+        }
+        .project-links a:hover { color: #1d4ed8; text-decoration: underline; }
+
+        /* =========================================
+           CONTACT FORM SECTION
+           ========================================= */
+        .contact-section { padding: 100px 0; text-align: center; }
+        .contact-container {
+            max-width: 700px; margin: 0 auto; background: white; padding: 50px;
+            border-radius: var(--radius); border: 1px solid var(--border); box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+        .contact-form .form-group { margin-bottom: 20px; text-align: left; }
+        .contact-form label { display: block; font-size: 0.9rem; font-weight: 600; margin-bottom: 8px; color: var(--text-dark); }
+        .contact-form input, .contact-form textarea {
+            width: 100%; padding: 14px 16px; border-radius: 8px; border: 1px solid var(--border);
+            font-family: inherit; font-size: 0.95rem; transition: var(--transition); outline: none; background: var(--bg-alt);
+        }
+        .contact-form input:focus, .contact-form textarea:focus { border-color: var(--primary); background: white; box-shadow: 0 0 0 3px var(--primary-light); }
+        .contact-form textarea { resize: vertical; min-height: 120px; }
+        
+        .contact-form button {
+            width: 100%; background: var(--primary); color: white; padding: 16px;
+            border: none; border-radius: 8px; font-size: 1rem; font-weight: 700;
+            cursor: pointer; transition: var(--transition); margin-top: 10px;
+            display: flex; justify-content: center; align-items: center; gap: 8px;
+        }
+        .contact-form button:hover { background: #1d4ed8; transform: translateY(-2px); box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2); }
+        .contact-form button:disabled { opacity: 0.7; cursor: not-allowed; transform: none; }
+        
+        .form-message { margin-top: 16px; font-weight: 600; font-size: 0.95rem; display: none; padding: 12px; border-radius: 6px; }
+        .form-message.success { display: block; color: #16a34a; background: #f0fdf4; border: 1px solid #bbf7d0; }
+        .form-message.error { display: block; color: #dc2626; background: #fef2f2; border: 1px solid #fecaca; }
+
+        /* =========================================
+           FOOTER
+           ========================================= */
+        footer { border-top: 1px solid var(--border); padding: 60px 0 30px; background: white; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 60px; margin-bottom: 60px; }
+        .footer-brand h2 { font-size: 1.5rem; font-weight: 800; margin-bottom: 16px; }
+        .footer-brand p { color: var(--text-muted); font-size: 0.95rem; max-width: 300px; }
+        .footer-links h4 { font-size: 1rem; font-weight: 700; margin-bottom: 20px; }
+        .footer-links ul { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+        .footer-links a { color: var(--text-muted); font-size: 0.95rem; transition: var(--transition); }
+        .footer-links a:hover { color: var(--primary); }
+        
+        .footer-bottom {
+            border-top: 1px solid var(--border); padding-top: 30px;
+            display: flex; justify-content: space-between; align-items: center;
+            color: var(--text-muted); font-size: 0.9rem;
+        }
+        .social-icons { display: flex; gap: 16px; }
+        .social-icons a {
+            width: 40px; height: 40px; border-radius: 50%; background: var(--bg-alt);
+            display: flex; align-items: center; justify-content: center;
+            color: var(--text-dark); transition: var(--transition);
+        }
+        .social-icons a:hover { background: var(--primary); color: white; transform: translateY(-3px); }
+
+        /* =========================================
+           RESPONSIVE DESIGN
+           ========================================= */
+        @media (max-width: 992px) {
+            .hero h1 { font-size: 3rem; }
+            .bento-grid { grid-template-columns: 1fr 1fr; }
+            .bento-card.large { grid-column: span 2; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hero h1 { font-size: 2.5rem; }
+            .hero-buttons { flex-direction: column; }
+            .bento-grid { grid-template-columns: 1fr; }
+            .bento-card.large { grid-column: span 1; }
+            .footer-grid { grid-template-columns: 1fr; gap: 40px; }
+            .footer-bottom { flex-direction: column; gap: 20px; text-align: center; }
+            .contact-container { padding: 30px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <div class="container nav-container">
+            <a href="pic.jpg" class="logo">Khuzaifah<span>.</span></a>
+            <div class="nav-links">
+                <a href="#features">Projects</a>
+                <a href="#skills">Skills</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <a href="#contact" class="nav-btn">Hire Me</a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-badge">
+                <i class="fas fa-circle" style="font-size: 8px;"></i> Available for Internships
+            </div>
+            <h1>I am a <span>Python Developer</span> & Software Engineer.</h1>
+            <p>I'm Aine Mbabazi Khuzaifah. I build scalable backend systems with Python and Django, manage databases with SQL, and craft clean, responsive interfaces.</p>
+            
+            <div class="hero-buttons">
+                <a href="#features" class="btn-primary">
+                    View My Work <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="#contact" class="btn-secondary">
+                    Contact Me <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+
+            <div class="hero-image-wrapper">
+                <img src="pic.jpg" alt="Dashboard Mockup">
+            </div>
+        </div>
+    </section>
+
+    <!-- TECH STACK STRIP -->
+    <div class="tech-strip" id="skills">
+        <div class="container">
+            <p>Technologies I work with</p>
+            <div class="tech-icons">
+                <i class="fab fa-python" title="Python"></i>
+                <i class="fas fa-server" title="Django"></i>
+                <i class="fas fa-database" title="MySQL"></i>
+                <i class="fab fa-html5" title="HTML5"></i>
+                <i class="fab fa-css3-alt" title="CSS3"></i>
+                <i class="fab fa-js" title="JavaScript"></i>
+                <i class="fab fa-git-alt" title="Git"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- BENTO GRID FEATURES -->
+    <section class="features-section" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Work</h2>
+                <p>A selection of my recent projects, showcasing my approach to design and development.</p>
+            </div>
+
+            <div class="bento-grid">
+                
+                <!-- Project 1 -->
+                <div class="bento-card large">
+                    <img src="pic2.jpg" alt="E-Attendance" class="project-image">
+                    <div class="card-icon"><i class="fas fa-fingerprint"></i></div>
+                    <h3>E-Attendance System</h3>
+                    <p>A mobile-first UI/UX case study to streamline student registration and attendance tracking for UICT lecturers. Designed with user research, wireframes, and high-fidelity prototyping in Figma, and built using Python & Django.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/khuzaifah/Attendancesystem" target="_blank"><i class="fab fa-github"></i> GitHub Repo</a>
+                        <a href="https://e-attendance-s0rl.onrender.com" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                    </div>
+                </div>
+
+                <!-- Project 2 (Added Image) -->
+                <div class="bento-card">
+                    <img src="pic3.jpg" alt="School Website" class="project-image">
+                    <div class="card-icon"><i class="fas fa-globe"></i></div>
+                    <h3>School Website</h3>
+                    <p>A responsive, modern frontend website for a school. Built with semantic HTML, CSS, and interactive JavaScript elements.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/khuzaifah812/kamcoder" target="_blank"><i class="fab fa-github"></i> GitHub Repo</a>
+                        <a href="https://revivalgrammarsecondaryschool.vercel.app/" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                    </div>
+                </div>
+
+                <!-- Project 3 (Added Image) -->
+                <div class="bento-card">
+                    <img src="pic4.jpg" alt="Library Web Interface" class="project-image">
+                    <div class="card-icon"><i class="fas fa-book-open"></i></div>
+                    <h3>Library Web Interface</h3>
+                    <p>A clean and accessible frontend interface for a library system. Built purely with HTML, CSS, and JavaScript for an intuitive user experience.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/khuzaifah/kamcoder/khuzaifah" target="_blank"><i class="fab fa-github"></i> GitHub Repo</a>
+                        <a href="https://devspherelms.vercel.app/" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                    </div>
+                </div>
+
+                <!-- About Card -->
+                <div class="bento-card large" id="about">
+                    <div class="card-icon"><i class="fas fa-user"></i></div>
+                    <h3>About Me</h3>
+                    <p>I am a Software Engineering student at UICT with a passion for building robust backend systems and solving real-world problems using Python and Django. Beyond coding, I am actively involved in TISA, promoting tech leadership and skills across the student community.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT FORM SECTION -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Let's build something together.</h2>
+                <p>Currently open to internship opportunities, freelance projects, and collaborations. Send me a message below!</p>
+            </div>
+            
+            <div class="contact-container">
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Your Name *</label>
+                        <input type="text" id="name" name="from_name" placeholder="John Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email *</label>
+                        <input type="email" id="email" name="from_email" placeholder="john@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" placeholder="What is this regarding?">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" placeholder="How can I help you?" required></textarea>
+                    </div>
+                    <button type="submit" id="sendBtn"><i class="fas fa-paper-plane"></i> Send Message</button>
+                    <div class="form-message" id="formMessage"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h2>Khuzaifah.</h2>
+                    <p>Python Developer & Software Engineer based in Wakiso, Uganda. Building practical solutions for real-world problems.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="#features">Projects</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="mailto:khuzaifah812@gmail.com">Email</a></li>
+                        <li><a href="https://wa.me/256789958889" target="_blank">WhatsApp</a></li>
+                        <li><a href="https://www.linkedin.com/in/aine-mbabazi-khuzaifah-25963440b" target="_blank">LinkedIn</a></li>
+                        <li><a href="https://github.com/khuzaifah812" target="_blank">GitHub</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Aine Mbabazi Khuzaifah. All rights reserved.</p>
+                <div class="social-icons">
+                    <a href="https://github.com/khuzaifah812" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/aine-mbabazi-khuzaifah-25963440b" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="mailto:khuzaifah812@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="https://wa.me/256789958889" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- EMAILJS LIBRARY -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <!-- JavaScript for EmailJS Form Handling -->
+    <script>
+        // Initialize EmailJS with your Public Key
+        emailjs.init("tylL4KuFLd-S9_AZW");
+
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault(); 
+            
+            const btn = document.getElementById('sendBtn');
+            const msg = document.getElementById('formMessage');
+            
+            // Get form values
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const subject = document.getElementById('subject').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            // Loading state
+            btn.innerHTML = 'Sending... <i class="fas fa-spinner fa-spin"></i>';
+            btn.disabled = true;
+            msg.className = 'form-message';
+            msg.style.display = 'none';
+
+            // Prepare template parameters
+            const templateParams = {
+                from_name: name,
+                from_email: email,
+                subject: subject || 'Portfolio Contact',
+                message: message
+            };
+
+            // Send Email via EmailJS
+            emailjs.send("service_rdwhm1n", "template_qdqogyb", templateParams)
+                .then(() => {
+                    msg.className = 'form-message success';
+                    msg.innerHTML = '✅ Message sent successfully! I will get back to you soon.';
+                    this.reset(); 
+                })
+                .catch((error) => {
+                    console.error('EmailJS Error:', error);
+                    msg.className = 'form-message error';
+                    msg.innerHTML = '❌ Failed to send. Please try again or email me directly at khuzaifah812@gmail.com.';
+                })
+                .finally(() => {
+                    btn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+                    btn.disabled = false;
+                });
+        });
+    </script>
+</body>
+</html>

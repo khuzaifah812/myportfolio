@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>TechNova | IT Systems, Web Development &amp; Data</title>
+  <meta name="description" content="TechNova builds custom IT systems, websites and data solutions for startups, small and medium businesses and large enterprises. Protect the data. Decode the insight. Mobilize the future.">
+  <meta name="theme-color" content="rgb(248, 251, 255)">
+
+  <!-- Lets the CSS know JavaScript is running, so scroll-in animations can start hidden -->
+  <script>document.documentElement.classList.add('js');</script>
+
+  <!-- Search and social sharing. Replace technova.example with your real web address. -->
+  <link rel="canonical" href="https://www.technova.example/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="TechNova | IT Systems, Web Development &amp; Data">
+  <meta property="og:description" content="TechNova builds custom IT systems, websites and data solutions for startups, small and medium businesses and large enterprises. Protect the data. Decode the insight. Mobilize the future.">
+  <meta property="og:url" content="https://www.technova.example/">
+  <meta property="og:image" content="https://www.technova.example/images/hero/office-systems.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;700&display=swap">
+
+  <!-- Styles (responsive.css last, so its phone rules win) -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/mockups.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <!-- Scripts: company details and lists first, then the code that uses them -->
+  <script src="js/config.js" defer></script>
+  <script src="js/team.js" defer></script>
+  <script src="js/mockups.js" defer></script>
+  <script src="js/layout.js" defer></script>
+  <script src="js/sections.js" defer></script>
+  <script src="js/ui.js" defer></script>
+</head>
+<body data-page="index">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Header and footer are drawn by js/layout.js from js/config.js -->
+  <header class="site-header" id="site-header"></header>
+
+  <main id="main">
+    <!-- ================= HERO SLIDER =================
+         Each slide has TWO parts with the same data-slide number:
+           1. the words, inside .hero-copy (left)
+           2. the picture, inside .hero-media (right)
+         To change a slide, edit both parts. To add a slide, copy both
+         parts and give them the next number; the slider counts them. -->
+    <section class="hero" id="home" data-slider data-interval="6000" data-label="slide" aria-roledescription="carousel" aria-label="What TechNova does">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <div class="stack">
+            <!-- Slide 1: words -->
+            <div class="hero-slide slide is-active" data-slide="0">
+              <p class="label">Custom IT Systems</p>
+              <h1>Systems That Run<br><span class="hl">Your Business.</span></h1>
+              <p class="tagline">ERP, CRM and automation built around the way your team works, for startups, growing companies and large enterprises.</p>
+              <div class="btn-row">
+                <a class="btn btn-primary" href="contact.html">Start a Project</a>
+                <a class="btn btn-ghost" href="services.html">View Solutions</a>
+              </div>
+            </div>
+            <!-- Slide 2: words -->
+            <div class="hero-slide slide" data-slide="1">
+              <p class="label">Web &amp; Mobile</p>
+              <h2>Websites and Apps<br><span class="hl">That Work on Any Phone.</span></h2>
+              <p class="tagline">Fast, responsive products tested on the devices your customers carry every day.</p>
+              <div class="btn-row">
+                <a class="btn btn-primary" href="web-development.html">Website Development</a>
+                <a class="btn btn-ghost" href="contact.html">Start a Project</a>
+              </div>
+            </div>
+            <!-- Slide 3: words -->
+            <div class="hero-slide slide" data-slide="2">
+              <p class="label">Data &amp; Insight</p>
+              <h2>Decode the Insight<br><span class="hl">Hidden in Your Data.</span></h2>
+              <p class="tagline">Dashboards and reports that turn everyday records into clear decisions for managers and boards.</p>
+              <div class="btn-row">
+                <a class="btn btn-primary" href="data-analysis.html">Data Analysis</a>
+                <a class="btn btn-ghost" href="contact.html">Talk to Us</a>
+              </div>
+            </div>
+            <!-- Slide 4: words -->
+            <div class="hero-slide slide" data-slide="3">
+              <p class="label">Security &amp; Support</p>
+              <h2>Protect the Data<br><span class="hl">Your Business Runs On.</span></h2>
+              <p class="tagline">Monitoring, backups and security updates that keep your systems safe and online, day and night.</p>
+              <div class="btn-row">
+                <a class="btn btn-primary" href="support.html">IT Support</a>
+                <a class="btn btn-ghost" href="contact.html">Talk to Us</a>
+              </div>
+            </div>
+            <!-- Slide 5: words -->
+            <div class="hero-slide slide" data-slide="4">
+              <p class="label">Enterprise Scale</p>
+              <h2>From Startups<br><span class="hl">to Large Enterprises.</span></h2>
+              <p class="tagline">Systems designed for more users, more branches and more data, so you grow without rebuilding.</p>
+              <div class="btn-row">
+                <a class="btn btn-primary" href="industries.html">Industries We Serve</a>
+                <a class="btn btn-ghost" href="contact.html">Start a Project</a>
+              </div>
+            </div>
+            <!-- Slide 6: words -->
+            <div class="hero-slide slide" data-slide="5">
+              <p class="label">Our People</p>
+              <h2>A Team Mobilizing<br><span class="hl">the Future.</span></h2>
+              <p class="tagline">Engineers, architects, analysts and advocates who stay with your project from the first call to long after launch.</p>
+              <div class="btn-row">
+                <a class="btn btn-primary" href="team.html">Meet the Team</a>
+                <a class="btn btn-ghost" href="about.html">About TechNova</a>
+              </div>
+            </div>
+          </div>
+          <div class="hero-controls">
+            <p class="slide-count" data-count><b>01</b> / 06</p>
+            <div class="dots" data-dots></div>
+            <div class="hero-arrows">
+              <button class="hero-arrow" type="button" data-prev aria-label="Previous slide"><svg viewBox="0 0 12 12" width="12" height="12" aria-hidden="true"><path d="M8 1L3 6l5 5" fill="none" stroke="currentColor" stroke-width="2"/></svg></button>
+              <button class="hero-arrow" type="button" data-next aria-label="Next slide"><svg viewBox="0 0 12 12" width="12" height="12" aria-hidden="true"><path d="M4 1l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2"/></svg></button>
+            </div>
+          </div>
+        </div>
+        <div class="hero-media">
+          
+          <!-- Slide 1: picture -->
+          <figure class="hero-pic slide is-active" data-slide="0">
+            <img src="images/hero/office-systems.jpg" alt="Staff working at computers in a modern office" loading="eager">
+            <figcaption>ERP · CRM · Automation</figcaption>
+          </figure>
+          <!-- Slide 2: picture -->
+          <figure class="hero-pic slide" data-slide="1">
+            <img src="images/hero/product-demo.jpg" alt="A mobile app shown on three phone screens during a product demo" loading="lazy">
+            <figcaption>Web · Mobile · E-commerce</figcaption>
+          </figure>
+          <!-- Slide 3: picture -->
+          <figure class="hero-pic slide" data-slide="2">
+            <img src="images/hero/data-dashboards.jpg" alt="An analyst reviewing dashboards on a desktop monitor" loading="lazy">
+            <figcaption>Dashboards · Reports · BI</figcaption>
+          </figure>
+          <!-- Slide 4: picture -->
+          <figure class="hero-pic slide" data-slide="3">
+            <img src="images/hero/server-room.jpg" alt="A technician standing in a server room lit with blue lights" loading="lazy">
+            <figcaption>Monitoring · Backups · Security</figcaption>
+          </figure>
+          <!-- Slide 5: picture -->
+          <figure class="hero-pic slide" data-slide="4">
+            <img src="images/hero/enterprise-operations.jpg" alt="Engineers in safety gear reviewing control room screens" loading="lazy">
+            <figcaption>Multi-branch · Integrations · Scale</figcaption>
+          </figure>
+          <!-- Slide 6: picture -->
+          <figure class="hero-pic slide" data-slide="5">
+            <img src="images/hero/tech-community.jpg" alt="Developers and mentors gathered at a technology event" loading="lazy">
+            <figcaption>Rooted in the tech community</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= MOTTO ================= -->
+    <section class="motto" aria-label="Our motto">
+      <div class="wrap">
+        <div class="section-head center">
+          <p class="label">Our motto</p>
+          <h2 class="h2">Three promises behind <span class="hl">every project</span></h2>
+        </div>
+        <div class="motto-grid">
+          <a class="motto-item" href="support.html">
+            <span class="motto-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.2 8-8 9-4.8-1-8-4.5-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></span>
+            <h2>Protect the data.</h2>
+            <p>Backups, monitoring and security updates for every system we build or support.</p>
+            <span class="arrow-link">IT support <span aria-hidden="true">&rarr;</span></span>
+          </a>
+          <a class="motto-item" href="data-analysis.html">
+            <span class="motto-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/></svg></span>
+            <h2>Decode the insight.</h2>
+            <p>Dashboards and analysis that turn your records into clear decisions.</p>
+            <span class="arrow-link">Data analysis <span aria-hidden="true">&rarr;</span></span>
+          </a>
+          <a class="motto-item" href="services.html">
+            <span class="motto-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c3 2 5 5.5 5 9l-2 4H9l-2-4c0-3.5 2-7 5-9z"/><path d="M12 9.5h.01M9 16l-1 4 4-2 4 2-1-4"/></svg></span>
+            <h2>Mobilize the future.</h2>
+            <p>Systems and websites that move your business forward as it grows.</p>
+            <span class="arrow-link">All solutions <span aria-hidden="true">&rarr;</span></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= WHO WE SERVE ================= -->
+    <section class="section">
+      <div class="wrap">
+        <div class="split">
+          <h2>From startups<br><span class="hl">to large enterprises.</span></h2>
+          <p>Whatever your size, you get the same careful planning, clean engineering and support. The system simply grows to match the business.</p>
+        </div>
+        <div class="cap-grid three">
+          <article class="cap reveal">
+            <p class="label">Startups</p>
+            <h3>Launch your first product</h3>
+            <p>A focused first version built quickly, on code that can grow with your customers.</p>
+          </article>
+          <article class="cap reveal">
+            <p class="label">Small &amp; medium businesses</p>
+            <h3>Replace the patchwork</h3>
+            <p>One dependable system in place of spreadsheets, paper forms and tools that don't talk to each other.</p>
+          </article>
+          <article class="cap solid reveal">
+            <p class="label">Large enterprises</p>
+            <h3>Run at scale</h3>
+            <p>Multi-branch systems, integrations and data platforms with role-based access, audit trails and agreed support levels.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= WHAT WE DO =================
+         The service rows are drawn from the services list in js/config.js. -->
+    <section class="section section-alt" id="services">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="label">What we do</p>
+          <h2 class="h2">Five ways we power <span class="hl">your business</span></h2>
+        </div>
+        <div class="svc-list" data-services="rows"></div>
+      </div>
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+    <section class="section">
+      <div class="wrap about">
+        <div class="about-visual reveal" data-mockup="blueprint"></div>
+        <div class="about-text">
+          <p class="kicker">About TechNova</p>
+          <h2>Every system we build starts as a plan you can see.</h2>
+          <p>TechNova was started to fix a common problem: businesses paying for software nobody planned properly. So we plan first. You see the structure, the screens and the cost before a line of code is written.</p>
+          <dl class="about-list">
+            <div><dt class="label">Mission</dt><dd>Give businesses of every size dependable technology and a team they can reach.</dd></div>
+            <div><dt class="label">Vision</dt><dd>To be the technology partner businesses keep coming back to.</dd></div>
+            <div><dt class="label">Motto</dt><dd>Protect the data. Decode the insight. Mobilize the future.</dd></div>
+          </dl>
+          <a class="btn btn-ghost" href="about.html">More about us</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= HOW WE WORK (blue panel slider) =================
+         Words on the left and phone screens on the right share
+         data-slide numbers, like the hero slider. -->
+    <section class="sky" data-slider data-interval="7000" data-label="step" aria-roledescription="carousel" aria-label="How we work">
+      <div class="wrap sky-grid">
+        <div class="sky-text">
+          <div class="dots dots-dark" data-dots></div>
+          <div class="stack">
+            <div class="sky-slide slide slide-blur is-active" data-slide="0">
+              <h2>Listen<br><span>First</span></h2>
+              <p>Every project begins with your goals, your users and the way work happens today. No templates, no guesswork.</p>
+            </div>
+            <div class="sky-slide slide slide-blur" data-slide="1">
+              <h2>Map It<br><span>Out</span></h2>
+              <p>Before development starts you get a written plan with features, timeline and cost, all agreed in advance.</p>
+            </div>
+            <div class="sky-slide slide slide-blur" data-slide="2">
+              <h2>Build in<br><span>the Open</span></h2>
+              <p>Weekly demos on a test link let you see real progress and steer it while changes are still cheap.</p>
+            </div>
+            <div class="sky-slide slide slide-blur" data-slide="3">
+              <h2>Stay<br><span>On Call</span></h2>
+              <p>After launch we monitor, maintain and improve your system so it keeps pace with your business.</p>
+            </div>
+          </div>
+          <a class="btn btn-dark" href="contact.html">Start a project</a>
+        </div>
+        <div class="sky-visual" aria-hidden="true">
+          <div class="phone">
+            <div class="stack">
+              <div class="screen slide is-active" data-slide="0">
+                <p class="ph-sub">Discovery notes</p>
+                <p class="ph-title">Client goals</p>
+                <ul class="ph-check">
+                  <li class="done"><i></i>Goals agreed</li>
+                  <li class="done"><i></i>Users identified</li>
+                  <li class="done"><i></i>Current tools listed</li>
+                  <li><i></i>Budget range set</li>
+                  <li><i></i>Success measures</li>
+                </ul>
+              </div>
+              <div class="screen slide" data-slide="1">
+                <p class="ph-sub">Scope v1.2</p>
+                <p class="ph-title">System map</p>
+                <div class="ph-bp">
+                  <svg viewBox="0 0 200 170">
+                    <g fill="rgba(77, 184, 255, 0.12)" stroke="rgb(77, 184, 255)" stroke-width="1.2">
+                      <rect x="65" y="12" width="70" height="26" rx="5"/><rect x="12" y="72" width="70" height="26" rx="5"/>
+                      <rect x="118" y="72" width="70" height="26" rx="5"/><rect x="65" y="132" width="70" height="26" rx="5"/>
+                    </g>
+                    <path d="M100 38 L47 72 M100 38 L153 72 M47 98 L100 132 M153 98 L100 132" stroke="rgb(77, 184, 255)" stroke-dasharray="4 4" fill="none"/>
+                    <g fill="rgb(234, 242, 255)" font-size="10" font-family="Inter, sans-serif" text-anchor="middle">
+                      <text x="100" y="29">Users</text><text x="47" y="89">Web app</text><text x="153" y="89">Mobile</text><text x="100" y="149">API</text>
+                    </g>
+                  </svg>
+                </div>
+                <p class="ph-meta"><span>6 weeks</span><span>Signed off</span></p>
+              </div>
+              <div class="screen slide" data-slide="2">
+                <p class="ph-sub">Sprint 3 · test link</p>
+                <p class="ph-title">Orders module</p>
+                <pre class="code"><span class="c"># orders/services.py</span>&#10;<span class="k">def</span> <span class="f">create_order</span>(customer, items):&#10;    order = Order.objects.create(customer=customer)&#10;    <span class="k">for</span> item <span class="k">in</span> items:&#10;        order.add(item.product, item.qty)&#10;    notify(customer.phone, <span class="s">"Order received"</span>)&#10;    <span class="k">return</span> order</pre>
+              </div>
+              <div class="screen slide" data-slide="3">
+                <p class="ph-sub">Support chat</p>
+                <p class="ph-title">Help desk</p>
+                <div class="ph-chat">
+                  <p class="bubble them">Hi, reports are loading slowly this morning.</p>
+                  <p class="bubble us">Thanks for flagging it. We are checking the server now.</p>
+                  <p class="bubble us">Fixed: a backup job overlapped with office hours. It now runs at 2:00.</p>
+                  <p class="bubble them">Much faster. Thank you!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= HOW EVERY PROJECT RUNS ================= -->
+    <section class="section process" id="process">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="label">How we work</p>
+          <h2 class="h2">How every project runs</h2>
+          <p class="lead">Five checkpoints, each one signed off by you before the next begins.</p>
+        </div>
+        <div class="pins">
+          <svg class="pin-path" viewBox="0 0 100 600" preserveAspectRatio="none" aria-hidden="true"><path d="M30 100 C30 155 70 145 70 200 C70 255 30 245 30 300 C30 355 70 345 70 400 C70 455 30 445 30 500"/></svg>
+          <article class="pin-card">
+            <svg class="pin-icon" viewBox="0 0 16 22" aria-hidden="true"><path d="M4 1h8l-1.5 7 3.5 3v2H2v-2l3.5-3z" fill="currentColor"/><path d="M8 13v8" stroke="currentColor" stroke-width="1.6"/></svg>
+            <div class="pin-inner"><span class="pin-num">01</span><h3>Discovery Session</h3><p>We learn your goals, your constraints and what success looks like for your team.</p></div>
+          </article>
+          <article class="pin-card">
+            <svg class="pin-icon" viewBox="0 0 16 22" aria-hidden="true"><path d="M4 1h8l-1.5 7 3.5 3v2H2v-2l3.5-3z" fill="currentColor"/><path d="M8 13v8" stroke="currentColor" stroke-width="1.6"/></svg>
+            <div class="pin-inner"><span class="pin-num">02</span><h3>Scope &amp; System Map</h3><p>The conversation becomes a written plan: features, milestones and a fixed quote.</p></div>
+          </article>
+          <article class="pin-card">
+            <svg class="pin-icon" viewBox="0 0 16 22" aria-hidden="true"><path d="M4 1h8l-1.5 7 3.5 3v2H2v-2l3.5-3z" fill="currentColor"/><path d="M8 13v8" stroke="currentColor" stroke-width="1.6"/></svg>
+            <div class="pin-inner"><span class="pin-num">03</span><h3>Screens &amp; Prototype</h3><p>You click through the key screens and approve the look and flow before building starts.</p></div>
+          </article>
+          <article class="pin-card">
+            <svg class="pin-icon" viewBox="0 0 16 22" aria-hidden="true"><path d="M4 1h8l-1.5 7 3.5 3v2H2v-2l3.5-3z" fill="currentColor"/><path d="M8 13v8" stroke="currentColor" stroke-width="1.6"/></svg>
+            <div class="pin-inner"><span class="pin-num">04</span><h3>Build &amp; Test</h3><p>We build in short cycles and test on real devices, sharing a test link every week.</p></div>
+          </article>
+          <article class="pin-card">
+            <svg class="pin-icon" viewBox="0 0 16 22" aria-hidden="true"><path d="M4 1h8l-1.5 7 3.5 3v2H2v-2l3.5-3z" fill="currentColor"/><path d="M8 13v8" stroke="currentColor" stroke-width="1.6"/></svg>
+            <div class="pin-inner"><span class="pin-num">05</span><h3>Launch &amp; Care</h3><p>We handle the release, train your staff and stay on to monitor and improve the system.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= WORKING WORLDWIDE ================= -->
+    <section class="section section-alt">
+      <div class="wrap">
+        <div class="split">
+          <h2>Based in Kampala.<br><span class="hl">Building for the world.</span></h2>
+          <p>Wherever you are, working with TechNova feels close: one shared plan, regular video calls and a test link you can open from anywhere.</p>
+        </div>
+        <div class="cap-grid three">
+          <article class="cap">
+            <svg class="cap-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.8 3.8 5.8 3.8 9s-1.3 6.2-3.8 9c-2.5-2.8-3.8-5.8-3.8-9S9.5 5.8 12 3z"/></svg>
+            <h3>Remote-first delivery</h3>
+            <p>Video calls, shared project boards and weekly test links mean distance never slows a project down.</p>
+          </article>
+          <article class="cap">
+            <svg class="cap-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            <h3>Hours that overlap</h3>
+            <p>East Africa Time (UTC+3) shares working hours with Europe, the Middle East, Africa and much of Asia.</p>
+          </article>
+          <article class="cap">
+            <svg class="cap-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/><path d="M8.5 11h7M8.5 14h4"/></svg>
+            <h3>Clear, written English</h3>
+            <p>Proposals, updates and documentation are written plainly, so every decision is easy to follow and share.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= TEAM =================
+         Cards are drawn from js/team.js. Only people marked
+         visible: true are shown. -->
+    <section class="section section-alt" id="team">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="label">Our team</p>
+          <h2 class="h2">The people behind <span class="hl">your systems</span></h2>
+          <p class="lead">Engineers, architects, analysts and advocates who plan, build and support your technology.</p>
+        </div>
+        <div class="team-grid" data-team></div>
+        <p class="center-link"><a class="arrow-link" href="team.html">Meet the whole team <span aria-hidden="true">&rarr;</span></a></p>
+      </div>
+    </section>
+
+    <!-- ================= CALL TO ACTION ================= -->
+    <section class="cta">
+      <div class="wrap">
+        <h2 class="mega">You know your business.<br><span class="hl">We&rsquo;ll build the system.</span></h2>
+        <a class="orb" href="contact.html">Start your project &#8599;</a>
+        <p class="cta-note">Or call <a data-contact="phone"></a> &middot; <a data-contact="whatsapp" target="_blank" rel="noopener">Chat on WhatsApp</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="site-footer"></footer>
+</body>
+</html>

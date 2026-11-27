@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Portfolio | TechNova</title>
+  <meta name="description" content="Systems and websites built by TechNova.">
+  <meta name="theme-color" content="rgb(248, 251, 255)">
+
+  <!-- Lets the CSS know JavaScript is running, so scroll-in animations can start hidden -->
+  <script>document.documentElement.classList.add('js');</script>
+
+  <!-- Search and social sharing. Replace technova.example with your real web address. -->
+  <link rel="canonical" href="https://www.technova.example/portfolio.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Portfolio | TechNova">
+  <meta property="og:description" content="Systems and websites built by TechNova.">
+  <meta property="og:url" content="https://www.technova.example/portfolio.html">
+  <meta property="og:image" content="https://www.technova.example/images/hero/office-systems.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;700&display=swap">
+
+  <!-- Styles (responsive.css last, so its phone rules win) -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/mockups.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <!-- Scripts: company details and lists first, then the code that uses them -->
+  <script src="js/config.js" defer></script>
+  <script src="js/team.js" defer></script>
+  <script src="js/mockups.js" defer></script>
+  <script src="js/layout.js" defer></script>
+  <script src="js/sections.js" defer></script>
+  <script src="js/ui.js" defer></script>
+</head>
+<body data-page="portfolio">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Header and footer are drawn by js/layout.js from js/config.js -->
+  <header class="site-header" id="site-header"></header>
+
+  <main id="main">
+    <!-- ================= PAGE HEADING ================= -->
+    <section class="page-hero">
+      <div class="wrap">
+        <p class="label">Portfolio</p>
+        <h1 class="mega">Work built<br>to <span class="hl">last.</span></h1>
+        <p class="lead">Systems and websites designed around real business problems. These are sample entries; replace them with your own case studies.</p>
+      </div>
+    </section>
+
+    <!-- ================= PROJECTS =================
+         PLACEHOLDER: sample projects marked "Sample". Replace before launch. -->
+    <section class="section section-alt">
+      <div class="wrap">
+        <div class="cap-grid three">
+          <article class="cap reveal">
+            <span class="cap-num" aria-hidden="true">01</span>
+            <p class="label">Retail <span class="sample">Sample</span></p>
+            <h3>Inventory &amp; Sales ERP</h3>
+            <p>Stock, purchasing and invoicing for several branches in one system.</p>
+          </article>
+          <article class="cap reveal">
+            <span class="cap-num" aria-hidden="true">02</span>
+            <p class="label">Healthcare <span class="sample">Sample</span></p>
+            <h3>Clinic Booking Website</h3>
+            <p>Service pages with online appointment requests and reminders.</p>
+          </article>
+          <article class="cap reveal">
+            <span class="cap-num" aria-hidden="true">03</span>
+            <p class="label">Enterprise <span class="sample">Sample</span></p>
+            <h3>Group Reporting Dashboard</h3>
+            <p>Finance and operations data from every branch in one live dashboard.</p>
+          </article>
+          <article class="cap reveal">
+            <span class="cap-num" aria-hidden="true">04</span>
+            <p class="label">Logistics <span class="sample">Sample</span></p>
+            <h3>Cloud Migration</h3>
+            <p>On-premise servers moved to managed cloud hosting with backups.</p>
+          </article>
+          <article class="cap reveal">
+            <span class="cap-num" aria-hidden="true">05</span>
+            <p class="label">Fashion <span class="sample">Sample</span></p>
+            <h3>E-commerce Storefront</h3>
+            <p>Mobile checkout, Mobile Money payments and synced stock.</p>
+          </article>
+          <article class="cap reveal">
+            <span class="cap-num" aria-hidden="true">06</span>
+            <p class="label">Education <span class="sample">Sample</span></p>
+            <h3>Fees &amp; Results Portal</h3>
+            <p>Fees, results and parent notices in one school system.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CALL TO ACTION ================= -->
+    <section class="cta">
+      <div class="wrap">
+        <h2 class="mega">Your project could<br><span class="hl">be next.</span></h2>
+        <a class="orb" href="contact.html">Start your project &#8599;</a>
+        <p class="cta-note">Or call <a data-contact="phone"></a> &middot; <a data-contact="whatsapp" target="_blank" rel="noopener">Chat on WhatsApp</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="site-footer"></footer>
+</body>
+</html>

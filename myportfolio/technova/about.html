@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>About Us | TechNova</title>
+  <meta name="description" content="The story, mission, vision and motto behind TechNova.">
+  <meta name="theme-color" content="rgb(248, 251, 255)">
+
+  <!-- Lets the CSS know JavaScript is running, so scroll-in animations can start hidden -->
+  <script>document.documentElement.classList.add('js');</script>
+
+  <!-- Search and social sharing. Replace technova.example with your real web address. -->
+  <link rel="canonical" href="https://www.technova.example/about.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="About Us | TechNova">
+  <meta property="og:description" content="The story, mission, vision and motto behind TechNova.">
+  <meta property="og:url" content="https://www.technova.example/about.html">
+  <meta property="og:image" content="https://www.technova.example/images/hero/office-systems.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;700&display=swap">
+
+  <!-- Styles (responsive.css last, so its phone rules win) -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/mockups.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <!-- Scripts: company details and lists first, then the code that uses them -->
+  <script src="js/config.js" defer></script>
+  <script src="js/team.js" defer></script>
+  <script src="js/mockups.js" defer></script>
+  <script src="js/layout.js" defer></script>
+  <script src="js/sections.js" defer></script>
+  <script src="js/ui.js" defer></script>
+</head>
+<body data-page="about">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Header and footer are drawn by js/layout.js from js/config.js -->
+  <header class="site-header" id="site-header"></header>
+
+  <main id="main">
+    <!-- ================= PAGE HEADING ================= -->
+    <section class="page-hero center">
+      <div class="wrap">
+        <p class="label">About us</p>
+        <h1 class="mega">We build the systems<br><span class="hl">organizations run on.</span></h1>
+        <p class="lead">TechNova is a software engineering team building custom IT systems, websites, data solutions, integrations and IT support for startups, small and medium businesses, and large enterprises.</p>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="services.html">Explore Solutions <span aria-hidden="true">&rarr;</span></a>
+          <a class="btn btn-ghost" href="index.html#process">See How We Work</a>
+        </div>
+        <p class="note-line">Protect the data. Decode the insight. Mobilize the future.</p>
+      </div>
+    </section>
+
+    <!-- ================= PHOTO STRIP =================
+         The tiles are listed twice so the strip can loop without a gap. -->
+    <section class="marquee-section" aria-label="Our work and community">
+      <div class="marquee">
+        <div class="marquee-track">
+          <div class="tile"><img class="tile-photo" src="images/photos/team-laptops.jpg" alt="Developers collaborating on laptops" loading="lazy"></div>
+          <div class="tile" data-mockup="dashboard"></div>
+          <div class="tile"><img class="tile-photo" src="images/photos/client-meeting.jpg" alt="A project meeting with a client team" loading="lazy"></div>
+          <div class="tile" data-mockup="analytics"></div>
+          <div class="tile"><img class="tile-photo" src="images/photos/presentation.jpg" alt="A project plan being presented to an audience" loading="lazy"></div>
+          <div class="tile" data-mockup="website"></div>
+          <div class="tile"><img class="tile-photo" src="images/photos/strategy-session.jpg" alt="A strategy session in front of a large screen" loading="lazy"></div>
+          <div class="tile" data-mockup="support"></div>
+          <div class="tile"><img class="tile-photo" src="images/photos/developer-event.jpg" alt="Participants at a developer event" loading="lazy"></div>
+          <div class="tile" data-mockup="integration"></div>
+          <div class="tile"><img class="tile-photo" src="images/photos/server-room-review.jpg" alt="Two colleagues reviewing a tablet in a server room" loading="lazy"></div>
+          <div class="tile" data-mockup="dashboard"></div>
+          <div class="tile" aria-hidden="true"><img class="tile-photo" src="images/photos/team-laptops.jpg" alt="Developers collaborating on laptops" loading="lazy"></div>
+          <div class="tile" aria-hidden="true" data-mockup="dashboard"></div>
+          <div class="tile" aria-hidden="true"><img class="tile-photo" src="images/photos/client-meeting.jpg" alt="A project meeting with a client team" loading="lazy"></div>
+          <div class="tile" aria-hidden="true" data-mockup="analytics"></div>
+          <div class="tile" aria-hidden="true"><img class="tile-photo" src="images/photos/presentation.jpg" alt="A project plan being presented to an audience" loading="lazy"></div>
+          <div class="tile" aria-hidden="true" data-mockup="website"></div>
+          <div class="tile" aria-hidden="true"><img class="tile-photo" src="images/photos/strategy-session.jpg" alt="A strategy session in front of a large screen" loading="lazy"></div>
+          <div class="tile" aria-hidden="true" data-mockup="support"></div>
+          <div class="tile" aria-hidden="true"><img class="tile-photo" src="images/photos/developer-event.jpg" alt="Participants at a developer event" loading="lazy"></div>
+          <div class="tile" aria-hidden="true" data-mockup="integration"></div>
+          <div class="tile" aria-hidden="true"><img class="tile-photo" src="images/photos/server-room-review.jpg" alt="Two colleagues reviewing a tablet in a server room" loading="lazy"></div>
+          <div class="tile" aria-hidden="true" data-mockup="dashboard"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= OUR STORY ================= -->
+    <section class="section">
+      <div class="wrap about">
+        <figure class="photo reveal"><img src="images/photos/client-meeting.jpg" alt="A project meeting with a client team" loading="lazy"></figure>
+        <div class="about-text">
+          <p class="kicker">Our story</p>
+          <h2>Software that was planned before it was built.</h2>
+          <p>Too many organizations pay for systems that were rushed from idea to launch with no shared plan in between. The result is software that half-fits and costs more to fix than it did to build.</p>
+          <p>TechNova works the other way round. We map the system with you first, agree the scope and cost in writing, then build in short cycles you can see and test.</p>
+          <dl class="about-list">
+            <div><dt class="label">Who we serve</dt><dd>Startups, small and medium businesses, and large enterprises.</dd></div>
+            <div><dt class="label">What we build</dt><dd>Business systems, websites, data dashboards, integrations and IT support plans.</dd></div>
+            <div><dt class="label">Where we work</dt><dd data-contact-text="location"></dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= MISSION, VISION AND MOTTO ================= -->
+    <section class="section section-alt">
+      <div class="wrap">
+        <div class="split">
+          <h2>Protect. Decode.<br><span class="hl">Mobilize.</span></h2>
+          <p>Our motto is how we judge every project: is the data safe, does the system reveal something useful, and does it move the business forward?</p>
+        </div>
+        <div class="cap-grid three">
+          <article class="cap reveal"><span class="cap-num" aria-hidden="true">M</span><p class="label">Mission</p><h3>Make reliable software accessible.</h3><p>Give startups, growing businesses and large enterprises the planning and engineering discipline good software needs.</p></article>
+          <article class="cap reveal"><span class="cap-num" aria-hidden="true">V</span><p class="label">Vision</p><h3>Be the partner clients return to.</h3><p>Relationships that last beyond one launch, as systems, teams and markets change.</p></article>
+          <article class="cap reveal"><span class="cap-num" aria-hidden="true">01</span><p class="label">Motto</p><h3>Protect the data.</h3><p>Security, access control and tested backups are part of every system, never an extra.</p></article>
+          <article class="cap reveal"><span class="cap-num" aria-hidden="true">02</span><p class="label">Motto</p><h3>Decode the insight.</h3><p>We design systems that turn daily records into reports people can act on.</p></article>
+          <article class="cap wide solid reveal"><span class="cap-num" aria-hidden="true">03</span><p class="label">Motto</p><h3>Mobilize the future.</h3><p>Technology chosen to fit the problem and built to grow, so today&rsquo;s system still serves you tomorrow.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= TEAM =================
+         Cards are drawn from js/team.js. Only people marked
+         visible: true are shown. -->
+    <section class="section" id="team">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="label">Our team</p>
+          <h2 class="h2">Meet the <span class="hl">team</span></h2>
+          <p class="lead">The people who plan, build and support your systems.</p>
+        </div>
+        <div class="team-grid" data-team></div>
+        <p class="center-link"><a class="arrow-link" href="team.html">Meet the whole team <span aria-hidden="true">&rarr;</span></a></p>
+      </div>
+    </section>
+
+    <!-- ================= CALL TO ACTION ================= -->
+    <section class="cta">
+      <div class="wrap">
+        <h2 class="mega">Ready to plan<br><span class="hl">your next system?</span></h2>
+        <a class="orb" href="contact.html">Start your project &#8599;</a>
+        <p class="cta-note">Or call <a data-contact="phone"></a> &middot; <a data-contact="whatsapp" target="_blank" rel="noopener">Chat on WhatsApp</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="site-footer"></footer>
+</body>
+</html>

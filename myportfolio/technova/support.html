@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>IT Support &amp; Maintenance | TechNova</title>
+  <meta name="description" content="Monitoring, backups, security updates and a help desk you can reach, from TechNova.">
+  <meta name="theme-color" content="rgb(248, 251, 255)">
+
+  <!-- Lets the CSS know JavaScript is running, so scroll-in animations can start hidden -->
+  <script>document.documentElement.classList.add('js');</script>
+
+  <!-- Search and social sharing. Replace technova.example with your real web address. -->
+  <link rel="canonical" href="https://www.technova.example/support.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="IT Support &amp; Maintenance | TechNova">
+  <meta property="og:description" content="Monitoring, backups, security updates and a help desk you can reach, from TechNova.">
+  <meta property="og:url" content="https://www.technova.example/support.html">
+  <meta property="og:image" content="https://www.technova.example/images/hero/office-systems.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;700&display=swap">
+
+  <!-- Styles (responsive.css last, so its phone rules win) -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/mockups.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <!-- Scripts: company details and lists first, then the code that uses them -->
+  <script src="js/config.js" defer></script>
+  <script src="js/team.js" defer></script>
+  <script src="js/mockups.js" defer></script>
+  <script src="js/layout.js" defer></script>
+  <script src="js/sections.js" defer></script>
+  <script src="js/ui.js" defer></script>
+</head>
+<body data-page="support">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Header and footer are drawn by js/layout.js from js/config.js -->
+  <header class="site-header" id="site-header"></header>
+
+  <main id="main">
+    <!-- ================= PAGE HEADING ================= -->
+    <section class="intro">
+      <div class="wrap intro-grid">
+        <div class="intro-text">
+          <p class="label">IT Support &amp; Maintenance</p>
+          <p class="lead">Launch day is the start. We keep your systems watched, backed up and patched, with a real person to call.</p>
+          <h1 class="mega">Your IT should<span class="sr-only"> stay online, stay secure and just work.</span></h1>
+          <div class="cycle" aria-hidden="true">
+            <div class="stack" data-cycle>
+              <span class="cycle-word is-active">stay online.</span>
+              <span class="cycle-word">stay secure.</span>
+              <span class="cycle-word">just work.</span>
+            </div>
+          </div>
+          <div class="btn-row">
+            <a class="btn btn-primary" href="contact.html">Start a Project</a>
+            <a class="btn btn-ghost" href="#journey">Our process</a>
+          </div>
+        </div>
+        <figure class="photo reveal"><img src="images/photos/system-monitoring.jpg" alt="A technician monitoring system dashboards on several screens"></figure>
+      </div>
+    </section>
+
+    <!-- ================= PROCESS (scrolls sideways) ================= -->
+    <section class="journey" id="journey">
+      <div class="wrap journey-head">
+        <h2>Set up &rarr; stay up.</h2>
+        <div class="journey-tools">
+          <p class="label">Our process / 06</p>
+          <button class="round-btn" type="button" data-scroll="prev" aria-controls="steps-support" aria-label="Previous step"><svg viewBox="0 0 12 12" width="12" height="12" aria-hidden="true"><path d="M8 1L3 6l5 5" fill="none" stroke="currentColor" stroke-width="2"/></svg></button>
+          <button class="round-btn" type="button" data-scroll="next" aria-controls="steps-support" aria-label="Next step"><svg viewBox="0 0 12 12" width="12" height="12" aria-hidden="true"><path d="M4 1l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2"/></svg></button>
+        </div>
+      </div>
+      <div class="hscroll" id="steps-support" tabindex="0" aria-label="Process steps">
+          <article class="step">
+            <p class="label">01 / Onboarding</p>
+            <div><h3>Assess.</h3><p>We review your systems, devices and backups and fix urgent risks first.</p></div>
+          </article>
+          <article class="step">
+            <p class="label">02 / Setup</p>
+            <div><h3>Monitor.</h3><p>Uptime, storage and security monitoring are switched on.</p></div>
+          </article>
+          <article class="step">
+            <p class="label">03 / Protection</p>
+            <div><h3>Back up.</h3><p>Automatic backups run on a schedule, and restores are tested.</p></div>
+          </article>
+          <article class="step">
+            <p class="label">04 / Updates</p>
+            <div><h3>Patch.</h3><p>Security updates and renewals are applied before they become problems.</p></div>
+          </article>
+          <article class="step">
+            <p class="label">05 / Help desk</p>
+            <div><h3>Respond.</h3><p>Your team reaches a real person by phone, email or WhatsApp.</p></div>
+          </article>
+          <article class="step">
+            <p class="label">06 / Review</p>
+            <div><h3>Improve.</h3><p>Monthly reports show what happened and what to improve next.</p></div>
+          </article>
+      </div>
+    </section>
+
+    <!-- ================= WHAT YOU GET ================= -->
+    <section class="section">
+      <div class="wrap feature-split">
+        <figure class="illustration reveal"><img src="images/illustrations/issue-alerts.jpg" alt="Illustration of a team responding to a system alert" loading="lazy"></figure>
+        <div class="feature-text">
+          <p class="label">What you get</p>
+          <h2 class="h2">Protect the data <span class="hl">your business runs on.</span></h2>
+          <p>A support plan built around agreed response times, so you always know what happens when something goes wrong.</p>
+          <ul class="ticks">
+            <li><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="9" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M6 10.5l2.6 2.6L14 7.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Uptime and security monitoring</span></li>
+            <li><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="9" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M6 10.5l2.6 2.6L14 7.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Scheduled, tested backups</span></li>
+            <li><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="9" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M6 10.5l2.6 2.6L14 7.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Security updates and certificate renewals</span></li>
+            <li><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="9" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M6 10.5l2.6 2.6L14 7.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Help desk by phone, email and WhatsApp</span></li>
+            <li><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="9" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M6 10.5l2.6 2.6L14 7.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Monthly health reports</span></li>
+            <li><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="9" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M6 10.5l2.6 2.6L14 7.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Agreed response times, including for large teams</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= OTHER SERVICES (from js/config.js) ================= -->
+    <section class="section section-alt">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="label">More solutions</p>
+          <h2 class="h2">Combine it with</h2>
+        </div>
+        <div class="cap-grid" data-services="cards" data-exclude="support.html"></div>
+      </div>
+    </section>
+
+    <!-- ================= CALL TO ACTION ================= -->
+    <section class="cta">
+      <div class="wrap">
+        <h2 class="mega">You bring the goal.<br><span class="hl">We&rsquo;ll keep it running.</span></h2>
+        <a class="orb" href="contact.html">Start your project &#8599;</a>
+        <p class="cta-note">Or call <a data-contact="phone"></a> &middot; <a data-contact="whatsapp" target="_blank" rel="noopener">Chat on WhatsApp</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="site-footer"></footer>
+</body>
+</html>

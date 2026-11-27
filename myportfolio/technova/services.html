@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Solutions | TechNova</title>
+  <meta name="description" content="Custom IT systems, websites, data analysis, software integration and IT support from one accountable team.">
+  <meta name="theme-color" content="rgb(248, 251, 255)">
+
+  <!-- Lets the CSS know JavaScript is running, so scroll-in animations can start hidden -->
+  <script>document.documentElement.classList.add('js');</script>
+
+  <!-- Search and social sharing. Replace technova.example with your real web address. -->
+  <link rel="canonical" href="https://www.technova.example/services.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Solutions | TechNova">
+  <meta property="og:description" content="Custom IT systems, websites, data analysis, software integration and IT support from one accountable team.">
+  <meta property="og:url" content="https://www.technova.example/services.html">
+  <meta property="og:image" content="https://www.technova.example/images/hero/office-systems.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;700&display=swap">
+
+  <!-- Styles (responsive.css last, so its phone rules win) -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/mockups.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <!-- Scripts: company details and lists first, then the code that uses them -->
+  <script src="js/config.js" defer></script>
+  <script src="js/team.js" defer></script>
+  <script src="js/mockups.js" defer></script>
+  <script src="js/layout.js" defer></script>
+  <script src="js/sections.js" defer></script>
+  <script src="js/ui.js" defer></script>
+</head>
+<body data-page="services">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Header and footer are drawn by js/layout.js from js/config.js -->
+  <header class="site-header" id="site-header"></header>
+
+  <main id="main">
+    <!-- ================= PAGE HEADING ================= -->
+    <section class="page-hero center">
+      <div class="wrap">
+        <p class="label">Solutions</p>
+        <h1 class="mega">Technology<br><span class="hl">built around<br>how you work.</span></h1>
+        <p class="lead">TechNova brings custom systems, websites, data analysis, integrations and IT support under one team, for startups, small and medium businesses and large enterprises.</p>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="contact.html">Start a Project</a>
+          <a class="btn btn-ghost" href="#capabilities">See Solutions</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ALL SERVICES =================
+         The first five cards come from js/config.js; the last card is written here. -->
+    <section class="section section-alt" id="capabilities">
+      <div class="wrap">
+        <div class="split">
+          <h2>Five capabilities.<br><span class="hl">One accountable team.</span></h2>
+          <p>Choose one service or combine several into a single delivery plan. Each service has its own page with our process and what you get.</p>
+        </div>
+        <div class="cap-grid three" data-services="cards">
+          <a class="cap solid reveal" href="contact.html">
+            <p class="label">Not sure yet?</p>
+            <h3>Let&rsquo;s map it together</h3>
+            <p>Tell us the problem and we will recommend the simplest combination that solves it.</p>
+            <span class="arrow-link">Book a free call <span aria-hidden="true">&rarr;</span></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= HOW EVERY PROJECT RUNS ================= -->
+    <section class="section process" id="process">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="label">How we work</p>
+          <h2 class="h2">How every project runs</h2>
+          <p class="lead">Five checkpoints, each one signed off by you before the next begins.</p>
+        </div>
+        <div class="pins">
+          <svg class="pin-path" viewBox="0 0 100 600" preserveAspectRatio="none" aria-hidden="true"><path d="M30 100 C30 155 70 145 70 200 C70 255 30 245 30 300 C30 355 70 345 70 400 C70 455 30 445 30 500"/></svg>
+          <article class="pin-card">
+            <svg class="pin-icon" viewBox="0 0 16 22" aria-hidden="true"><path d="M4 1h8l-1.5 7 3.5 3v2H2v-2l3.5-3z" fill="currentColor"/><path d="M8 13v8" stroke="currentColor" stroke-width="1.6"/></svg>
+            <div class="pin-inner"><span class="pin-num">01</span><h3>Discovery Session</h3><p>We learn your goals, your constraints and what success looks like for your team.</p></div>
+          </article>
+          <article class="pin-card">
+            <svg class="pin-icon" viewBox="0 0 16 22" aria-hidden="true"><path d="M4 1h8l-1.5 7 3.5 3v2H2v-2l3.5-3z" fill="currentColor"/><path d="M8 13v8" stroke="currentColor" stroke-width="1.6"/></svg>
+            <div class="pin-inner"><span class="pin-num">02</span><h3>Scope &amp; System Map</h3><p>The conversation becomes a written plan: features, milestones and a fixed quote.</p></div>
+          </article>
+          <article class="pin-card">
+            <svg class="pin-icon" viewBox="0 0 16 22" aria-hidden="true"><path d="M4 1h8l-1.5 7 3.5 3v2H2v-2l3.5-3z" fill="currentColor"/><path d="M8 13v8" stroke="currentColor" stroke-width="1.6"/></svg>
+            <div class="pin-inner"><span class="pin-num">03</span><h3>Screens &amp; Prototype</h3><p>You click through the key screens and approve the look and flow before building starts.</p></div>
+          </article>
+          <article class="pin-card">
+            <svg class="pin-icon" viewBox="0 0 16 22" aria-hidden="true"><path d="M4 1h8l-1.5 7 3.5 3v2H2v-2l3.5-3z" fill="currentColor"/><path d="M8 13v8" stroke="currentColor" stroke-width="1.6"/></svg>
+            <div class="pin-inner"><span class="pin-num">04</span><h3>Build &amp; Test</h3><p>We build in short cycles and test on real devices, sharing a test link every week.</p></div>
+          </article>
+          <article class="pin-card">
+            <svg class="pin-icon" viewBox="0 0 16 22" aria-hidden="true"><path d="M4 1h8l-1.5 7 3.5 3v2H2v-2l3.5-3z" fill="currentColor"/><path d="M8 13v8" stroke="currentColor" stroke-width="1.6"/></svg>
+            <div class="pin-inner"><span class="pin-num">05</span><h3>Launch &amp; Care</h3><p>We handle the release, train your staff and stay on to monitor and improve the system.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FAQ =================
+         Each question opens and closes on its own (no JavaScript needed). -->
+    <section class="section section-alt" id="faq">
+      <div class="wrap">
+        <div class="section-head center">
+          <p class="label">FAQ</p>
+          <h2 class="h2">Before you start</h2>
+        </div>
+        <div class="faq">
+          <details class="faq-item" open>
+            <summary>Do you work with clients outside Uganda?</summary>
+            <p>Yes. We work remotely with clients anywhere, using video calls, shared project boards and weekly test links. Everything is written in English.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What time zone are you in?</summary>
+            <p>We are in Kampala on East Africa Time (UTC+3), which overlaps with working hours across Africa, Europe, the Middle East and much of Asia.</p>
+          </details>
+          <details class="faq-item">
+            <summary>How does a project start?</summary>
+            <p>With a free discovery call. We then send a written proposal with the scope, timeline and cost, and start only once you approve it.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Can you work with the systems we already use?</summary>
+            <p>Yes. We connect existing tools such as accounting software, Mobile Money, payment gateways, SMS and email, or migrate your data to a new system.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Do you work with large organizations?</summary>
+            <p>Yes. We build for startups, small and medium businesses and large enterprises, including multi-branch systems with role-based access and audit trails.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What happens after launch?</summary>
+            <p>We train your team and offer support plans covering monitoring, backups, security updates and a help desk you can reach by phone, email or WhatsApp.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CALL TO ACTION ================= -->
+    <section class="cta">
+      <div class="wrap">
+        <h2 class="mega">Not sure what you need?<br><span class="hl">Let&rsquo;s map it together.</span></h2>
+        <a class="orb" href="contact.html">Book a free call &#8599;</a>
+        <p class="cta-note">Or call <a data-contact="phone"></a> &middot; <a data-contact="whatsapp" target="_blank" rel="noopener">Chat on WhatsApp</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="site-footer"></footer>
+</body>
+</html>

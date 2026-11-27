@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Contact Us | TechNova</title>
+  <meta name="description" content="Contact TechNova to start a project or request a quote. Email technovaitcompany@gmail.com or call +256 789 958 889.">
+  <meta name="theme-color" content="rgb(248, 251, 255)">
+
+  <!-- Lets the CSS know JavaScript is running, so scroll-in animations can start hidden -->
+  <script>document.documentElement.classList.add('js');</script>
+
+  <!-- Search and social sharing. Replace technova.example with your real web address. -->
+  <link rel="canonical" href="https://www.technova.example/contact.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Contact Us | TechNova">
+  <meta property="og:description" content="Contact TechNova to start a project or request a quote. Email technovaitcompany@gmail.com or call +256 789 958 889.">
+  <meta property="og:url" content="https://www.technova.example/contact.html">
+  <meta property="og:image" content="https://www.technova.example/images/hero/office-systems.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;700&display=swap">
+
+  <!-- Styles (responsive.css last, so its phone rules win) -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/mockups.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <!-- Scripts: company details and lists first, then the code that uses them -->
+  <script src="js/config.js" defer></script>
+  <script src="js/team.js" defer></script>
+  <script src="js/mockups.js" defer></script>
+  <script src="js/layout.js" defer></script>
+  <script src="js/sections.js" defer></script>
+  <script src="js/ui.js" defer></script>
+  <script src="js/network.js" defer></script>
+  <script src="js/contact-form.js" defer></script>
+</head>
+<body data-page="contact">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Header and footer are drawn by js/layout.js from js/config.js -->
+  <header class="site-header" id="site-header"></header>
+
+  <main id="main">
+    <!-- ================= CONTACT HEADING =================
+         The moving network is drawn by js/network.js. -->
+    <section class="contact-hero">
+      <canvas class="net" data-network aria-hidden="true"></canvas>
+      <div class="wrap">
+        <p class="label">Contact</p>
+        <h1 class="mega">Tell us the problem.<br><span class="hl">We&rsquo;ll map the first solution.</span></h1>
+        <p class="lead">Wherever you are, share what you are building, fixing or automating, and we will reply with clear next steps. Move your cursor across the background to light up the network.</p>
+        <div class="btn-row">
+          <a class="btn btn-whatsapp" data-contact="whatsapp" target="_blank" rel="noopener"><svg viewBox="7 7 18 18" aria-hidden="true"><path fill="currentColor" d="M16.04 7.5a8.4 8.4 0 0 0-7.2 12.73L7.7 24.5l4.37-1.12a8.4 8.4 0 1 0 3.97-15.88zm0 15.36a6.95 6.95 0 0 1-3.55-.97l-.25-.15-2.6.67.7-2.53-.17-.26a6.97 6.97 0 1 1 5.87 3.24zm3.82-5.2c-.21-.1-1.24-.61-1.43-.68s-.33-.1-.47.1-.54.68-.66.82-.24.16-.45.05a5.7 5.7 0 0 1-2.83-2.47c-.21-.37.21-.34.61-1.13a.38.38 0 0 0-.02-.36c-.05-.1-.47-1.13-.64-1.55s-.34-.35-.47-.36h-.4a.77.77 0 0 0-.56.26 2.35 2.35 0 0 0-.73 1.75 4.09 4.09 0 0 0 .86 2.17 9.36 9.36 0 0 0 3.58 3.17c1.33.57 1.85.62 2.52.52a2.15 2.15 0 0 0 1.41-1 1.75 1.75 0 0 0 .12-1c-.05-.09-.19-.14-.4-.25z"/></svg> Chat on WhatsApp</a>
+          <a class="btn btn-primary" data-contact="email">Email TechNova</a>
+          <a class="btn btn-ghost" data-contact="phone">Call us</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= DETAILS AND FORM =================
+         Details come from js/config.js; the form is handled by js/contact-form.js. -->
+    <section class="section section-alt" id="contact-details">
+      <div class="wrap contact-grid">
+        <div class="info-cards">
+          <a class="info-card whatsapp" data-contact="whatsapp" target="_blank" rel="noopener"><span class="label">WhatsApp</span><b data-contact-text="phone"></b><span>Opens a chat with us straight away.</span></a>
+          <a class="info-card" data-contact="email"><span class="label">Email</span><b data-contact-text="email"></b><span>We reply within one business day.</span></a>
+          <a class="info-card" data-contact="phone"><span class="label">Phone</span><b data-contact-text="phone"></b><span data-contact-text="hours"></span></a>
+          <div class="info-card"><span class="label">Our local time</span><b class="local-time" data-local-time></b><span data-contact-text="timezone"></span></div>
+          <div class="info-card"><span class="label">Location</span><b data-contact-text="location"></b><span>Working with clients on site and worldwide.</span></div>
+        </div>
+
+        <form class="form" id="contact-form" novalidate>
+          <h2>Send us a message</h2>
+          <div class="form-row">
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" autocomplete="name" required aria-describedby="name-error">
+              <p class="error" id="name-error" hidden></p>
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-error">
+              <p class="error" id="email-error" hidden></p>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="phone">Phone <span class="opt">(optional)</span></label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel">
+            </div>
+            <div class="field">
+              <label for="service">What do you need?</label>
+              <select id="service" name="service" data-service-options></select>
+            </div>
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required aria-describedby="message-error"></textarea>
+            <p class="error" id="message-error" hidden></p>
+          </div>
+          <!-- Two ways to send: the button pressed decides (see js/contact-form.js) -->
+          <div class="form-actions">
+            <button class="btn btn-whatsapp" type="submit" value="whatsapp"><svg viewBox="7 7 18 18" aria-hidden="true"><path fill="currentColor" d="M16.04 7.5a8.4 8.4 0 0 0-7.2 12.73L7.7 24.5l4.37-1.12a8.4 8.4 0 1 0 3.97-15.88zm0 15.36a6.95 6.95 0 0 1-3.55-.97l-.25-.15-2.6.67.7-2.53-.17-.26a6.97 6.97 0 1 1 5.87 3.24zm3.82-5.2c-.21-.1-1.24-.61-1.43-.68s-.33-.1-.47.1-.54.68-.66.82-.24.16-.45.05a5.7 5.7 0 0 1-2.83-2.47c-.21-.37.21-.34.61-1.13a.38.38 0 0 0-.02-.36c-.05-.1-.47-1.13-.64-1.55s-.34-.35-.47-.36h-.4a.77.77 0 0 0-.56.26 2.35 2.35 0 0 0-.73 1.75 4.09 4.09 0 0 0 .86 2.17 9.36 9.36 0 0 0 3.58 3.17c1.33.57 1.85.62 2.52.52a2.15 2.15 0 0 0 1.41-1 1.75 1.75 0 0 0 .12-1c-.05-.09-.19-.14-.4-.25z"/></svg> Send on WhatsApp</button>
+            <button class="btn btn-primary" type="submit" value="email">Send by email</button>
+          </div>
+          <p class="form-note">WhatsApp opens a chat with your message typed in. Email opens your email app addressed to <span data-contact-text="email"></span>.</p>
+          <p class="form-status" id="form-status" role="status" aria-live="polite" hidden></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- ================= FAQ =================
+         Each question opens and closes on its own (no JavaScript needed). -->
+    <section class="section" id="faq">
+      <div class="wrap">
+        <div class="section-head center">
+          <p class="label">FAQ</p>
+          <h2 class="h2">Questions clients ask</h2>
+        </div>
+        <div class="faq">
+          <details class="faq-item" open>
+            <summary>Do you work with clients outside Uganda?</summary>
+            <p>Yes. We work remotely with clients anywhere, using video calls, shared project boards and weekly test links. Everything is written in English.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What time zone are you in?</summary>
+            <p>We are in Kampala on East Africa Time (UTC+3), which overlaps with working hours across Africa, Europe, the Middle East and much of Asia.</p>
+          </details>
+          <details class="faq-item">
+            <summary>How does a project start?</summary>
+            <p>With a free discovery call. We then send a written proposal with the scope, timeline and cost, and start only once you approve it.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Can you work with the systems we already use?</summary>
+            <p>Yes. We connect existing tools such as accounting software, Mobile Money, payment gateways, SMS and email, or migrate your data to a new system.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Do you work with large organizations?</summary>
+            <p>Yes. We build for startups, small and medium businesses and large enterprises, including multi-branch systems with role-based access and audit trails.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What happens after launch?</summary>
+            <p>We train your team and offer support plans covering monitoring, backups, security updates and a help desk you can reach by phone, email or WhatsApp.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="site-footer"></footer>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Our Team | TechNova</title>
+  <meta name="description" content="Meet the TechNova team behind your IT systems, websites and data.">
+  <meta name="theme-color" content="rgb(248, 251, 255)">
+
+  <!-- Lets the CSS know JavaScript is running, so scroll-in animations can start hidden -->
+  <script>document.documentElement.classList.add('js');</script>
+
+  <!-- Search and social sharing. Replace technova.example with your real web address. -->
+  <link rel="canonical" href="https://www.technova.example/team.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Our Team | TechNova">
+  <meta property="og:description" content="Meet the TechNova team behind your IT systems, websites and data.">
+  <meta property="og:url" content="https://www.technova.example/team.html">
+  <meta property="og:image" content="https://www.technova.example/images/hero/office-systems.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;700&display=swap">
+
+  <!-- Styles (responsive.css last, so its phone rules win) -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/mockups.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <!-- Scripts: company details and lists first, then the code that uses them -->
+  <script src="js/config.js" defer></script>
+  <script src="js/team.js" defer></script>
+  <script src="js/mockups.js" defer></script>
+  <script src="js/layout.js" defer></script>
+  <script src="js/sections.js" defer></script>
+  <script src="js/ui.js" defer></script>
+</head>
+<body data-page="team">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Header and footer are drawn by js/layout.js from js/config.js -->
+  <header class="site-header" id="site-header"></header>
+
+  <main id="main">
+    <!-- ================= PAGE HEADING ================= -->
+    <section class="page-hero">
+      <div class="wrap">
+        <p class="label">Our team</p>
+        <h1 class="mega">The people<br>behind your <span class="hl">systems.</span></h1>
+        <p class="lead">Engineers, architects, analysts and advocates who plan, build and look after your technology.</p>
+      </div>
+    </section>
+
+    <!-- ================= TEAM =================
+         Cards are drawn from js/team.js. Only people marked
+         visible: true are shown. -->
+    <section class="section section-alt" id="team">
+      <div class="wrap">
+        <div class="section-head">
+         
+          <h2 class="h2">Software development, data and IT</h2>
+          <p class="lead">Every project has a named lead and a team you can reach directly.</p>
+        </div>
+        <div class="team-grid" data-team></div>
+      </div>
+    </section>
+
+    <!-- ================= CALL TO ACTION ================= -->
+    <section class="cta">
+      <div class="wrap">
+        <h2 class="mega">Want to work with us?<br><span class="hl">Let&rsquo;s talk.</span></h2>
+        <a class="orb" href="contact.html">Get in touch &#8599;</a>
+        <p class="cta-note">Or call <a data-contact="phone"></a> &middot; <a data-contact="whatsapp" target="_blank" rel="noopener">Chat on WhatsApp</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="site-footer"></footer>
+</body>
+</html>

@@ -1,0 +1,608 @@
+/* =========================================================
+   TechNova — css/mockups.css
+   Drawn illustrations of dashboards, websites and reports
+   (built with HTML/CSS, no images needed). They keep a dark
+   "app screen" look so they stand out on the light pages.
+   Their colours: rgb(8, 26, 53) window, rgb(234, 242, 255) text,
+   rgb(77, 184, 255) highlights, rgb(61, 220, 151) "good" green.
+   ========================================================= */
+
+/* ---------- 1. Mockup building blocks ----------
+   Each sits inside .scale so its text sizes follow its own width. */
+.scale {
+  width: 100%;
+  container-type: inline-size;
+}
+
+.win {
+  font-size: 9px;
+  font-size: clamp(7px, 2.15cqi, 13px);
+  border: 1px solid rgba(120, 170, 255, 0.22);
+  border-radius: 1.2em;
+  overflow: hidden;
+  background: rgb(8, 26, 53);
+  color: rgb(234, 242, 255);
+  line-height: 1.4;
+  box-shadow: 0 20px 50px rgba(8, 27, 54, 0.3);
+}
+
+.win-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.6em;
+  padding: 0.9em 1.1em;
+  border-bottom: 1px solid rgba(120, 170, 255, 0.09);
+}
+
+.win-bar i {
+  flex: none;
+  width: 0.75em;
+  height: 0.75em;
+  border-radius: 50%;
+  background: rgba(120, 170, 255, 0.22);
+}
+
+.win-bar span {
+  margin-left: 0.6em;
+  font-family: "JetBrains Mono", ui-monospace, Consolas, monospace;
+  font-size: 0.95em;
+  color: rgb(154, 175, 204);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.win-bar .url {
+  flex: 1;
+  padding: 0.3em 0.9em;
+  border-radius: 1em;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.win-body {
+  container-type: inline-size;
+  background: rgb(247, 250, 255);
+}
+
+.dash {
+  display: grid;
+  grid-template-columns: 8.5em minmax(0, 1fr);
+}
+
+.dash-side {
+  display: grid;
+  align-content: start;
+  gap: 0.35em;
+  padding: 1.2em 0.9em;
+  border-right: 1px solid rgba(120, 170, 255, 0.09);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.dash-side b {
+  margin-bottom: 0.6em;
+  font-family: "Plus Jakarta Sans", "Segoe UI", Arial, sans-serif;
+  font-size: 1.3em;
+  color: rgb(77, 184, 255);
+}
+
+.dash-side span {
+  padding: 0.45em 0.7em;
+  border-radius: 0.6em;
+  color: rgb(154, 175, 204);
+}
+
+.dash-side .on {
+  background: rgba(47, 107, 255, 0.25);
+  color: rgb(234, 242, 255);
+}
+
+.dash-main {
+  display: grid;
+  gap: 1em;
+  padding: 1.2em;
+  min-width: 0;
+}
+
+.kpis {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.8em;
+}
+
+.kpi {
+  padding: 0.9em 1em;
+  border: 1px solid rgba(120, 170, 255, 0.09);
+  border-radius: 0.8em;
+  background: rgba(255, 255, 255, 0.04);
+  min-width: 0;
+}
+
+.kpi small {
+  display: block;
+  font-size: 0.85em;
+  color: rgb(154, 175, 204);
+}
+
+.kpi b {
+  display: block;
+  margin: 0.2em 0;
+  font-family: "Plus Jakarta Sans", "Segoe UI", Arial, sans-serif;
+  font-size: 1.4em;
+  white-space: nowrap;
+}
+
+.kpi em {
+  font-size: 0.82em;
+  font-style: normal;
+}
+
+.up {
+  color: rgb(61, 220, 151);
+}
+
+.warn {
+  color: rgb(255, 181, 71);
+}
+
+.chart-card {
+  padding: 1em;
+  border: 1px solid rgba(120, 170, 255, 0.09);
+  border-radius: 0.8em;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.chart-card small {
+  color: rgb(154, 175, 204);
+}
+
+.chart {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.45em;
+  height: 8em;
+  margin-top: 0.8em;
+}
+
+.chart span {
+  flex: 1;
+  border-radius: 0.3em 0.3em 0 0;
+  background: linear-gradient(rgb(77, 184, 255), rgb(47, 107, 255));
+}
+
+.rows {
+  display: grid;
+  gap: 0.4em;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr auto;
+  gap: 0.8em;
+  align-items: center;
+  padding: 0.55em 0.8em;
+  border-radius: 0.6em;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.row span:first-child {
+  font-family: "JetBrains Mono", ui-monospace, Consolas, monospace;
+  color: rgb(154, 175, 204);
+}
+
+.pill {
+  padding: 0.25em 0.8em;
+  border-radius: 1em;
+  font-size: 0.85em;
+  font-weight: 600;
+}
+
+.pill.ok {
+  background: rgba(61, 220, 151, 0.15);
+  color: rgb(61, 220, 151);
+}
+
+.pill.pend {
+  background: rgba(255, 181, 71, 0.15);
+  color: rgb(255, 181, 71);
+}
+
+.int-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  padding: 1em;
+}
+
+.int-links path {
+  fill: none;
+  stroke: rgb(77, 184, 255);
+  stroke-width: 1.5;
+  stroke-dasharray: 5 6;
+  opacity: 0.6;
+  animation: flow 1.6s linear infinite;
+}
+
+@keyframes flow {
+  to {
+    stroke-dashoffset: -22;
+  }
+}
+
+.int-node rect {
+  fill: rgb(14, 42, 85);
+  stroke: rgba(120, 170, 255, 0.22);
+}
+
+.int-node text {
+  fill: rgb(234, 242, 255);
+  font: 600 13px "Inter", "Segoe UI", Arial, sans-serif;
+  text-anchor: middle;
+}
+
+.int-core rect {
+  fill: rgb(47, 107, 255);
+}
+
+.int-core text {
+  fill: rgb(255, 255, 255);
+  font: 700 15px "Plus Jakarta Sans", "Segoe UI", Arial, sans-serif;
+  text-anchor: middle;
+}
+
+.int-core .sub {
+  fill: rgba(255, 255, 255, 0.75);
+  font: 500 10px "JetBrains Mono", ui-monospace, Consolas, monospace;
+}
+
+.sup {
+  display: grid;
+  gap: 1.1em;
+  padding: 1.3em;
+}
+
+.sup-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1em;
+}
+
+.sup-head b {
+  font-family: "Plus Jakarta Sans", "Segoe UI", Arial, sans-serif;
+  font-size: 1.25em;
+}
+
+.uptime {
+  display: grid;
+  grid-template-columns: repeat(30, 1fr);
+  gap: 0.25em;
+  height: 2.6em;
+}
+
+.uptime span {
+  border-radius: 0.2em;
+  background: rgb(61, 220, 151);
+  opacity: 0.85;
+}
+
+.uptime .warn {
+  background: rgb(255, 181, 71);
+}
+
+.uptime-meta {
+  display: flex;
+  justify-content: space-between;
+  font: 0.82em "JetBrains Mono", ui-monospace, Consolas, monospace;
+  color: rgb(154, 175, 204);
+}
+
+.sup-log {
+  display: grid;
+  gap: 0.45em;
+}
+
+.sup-log li {
+  display: flex;
+  align-items: center;
+  gap: 0.7em;
+  padding: 0.65em 0.8em;
+  border: 1px solid rgba(120, 170, 255, 0.09);
+  border-radius: 0.6em;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.sup-log i {
+  flex: none;
+  width: 0.6em;
+  height: 0.6em;
+  border-radius: 50%;
+  background: rgb(61, 220, 151);
+}
+
+.sup-log i.warn {
+  background: rgb(255, 181, 71);
+}
+
+.sup-log time {
+  margin-left: auto;
+  font: 0.85em "JetBrains Mono", ui-monospace, Consolas, monospace;
+  color: rgb(154, 175, 204);
+}
+
+.code {
+  margin: 0;
+  padding: 1.2em 1.4em;
+  font: 1em/1.7 "JetBrains Mono", ui-monospace, Consolas, monospace;
+  color: rgb(207, 224, 255);
+  white-space: pre;
+  overflow: hidden;
+}
+
+.code .k {
+  color: rgb(122, 167, 255);
+}
+
+.code .f {
+  color: rgb(77, 184, 255);
+}
+
+.code .s {
+  color: rgb(155, 229, 184);
+}
+
+.code .c {
+  color: rgb(107, 127, 158);
+}
+
+/* Mini website used inside browser and device mockups */
+.mini {
+  display: grid;
+  gap: 1.4em;
+  padding: 1.6em;
+  font-size: 7px;
+  font-size: 2.1cqi;
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  line-height: 1.3;
+  color: rgb(8, 24, 51);
+}
+
+.mini-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.2em;
+}
+
+.mini-nav b {
+  margin-right: auto;
+  font-family: "Plus Jakarta Sans", "Segoe UI", Arial, sans-serif;
+  color: rgb(47, 107, 255);
+}
+
+.mini-nav span {
+  width: 3em;
+  height: 0.5em;
+  border-radius: 1em;
+  background: rgb(213, 224, 240);
+}
+
+.mini-nav em,
+.mini-hero em {
+  padding: 0.45em 1em;
+  border-radius: 1em;
+  font-size: 0.85em;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.mini-nav em {
+  background: rgb(8, 24, 51);
+  color: rgb(255, 255, 255);
+}
+
+.mini-hero {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 1.4em;
+}
+
+.mini-hero strong {
+  display: block;
+  margin-bottom: 0.5em;
+  font-family: "Plus Jakarta Sans", "Segoe UI", Arial, sans-serif;
+  font-size: 2em;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+
+.mini-hero p {
+  height: 0.55em;
+  margin: 0.5em 0;
+  border-radius: 1em;
+  background: rgb(213, 224, 240);
+}
+
+.mini-hero p.short {
+  width: 60%;
+}
+
+.mini-hero em {
+  display: inline-block;
+  margin-top: 0.8em;
+  background: rgb(47, 107, 255);
+  color: rgb(255, 255, 255);
+}
+
+.mini-img {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  border-radius: 1em;
+  overflow: hidden;
+  background: linear-gradient(135deg, rgb(47, 107, 255), rgb(77, 184, 255));
+}
+
+.mini-img::after {
+  content: "";
+  position: absolute;
+  right: -15%;
+  bottom: -30%;
+  width: 70%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.mini-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1em;
+}
+
+.mini-cards div {
+  padding: 1em;
+  border: 1px solid rgb(225, 233, 245);
+  border-radius: 0.8em;
+  background: rgb(255, 255, 255);
+}
+
+.mini-cards i {
+  display: block;
+  width: 1.6em;
+  height: 1.6em;
+  margin-bottom: 0.6em;
+  border-radius: 0.5em;
+  background: rgb(228, 237, 255);
+}
+
+.mini-cards p {
+  height: 0.45em;
+  margin-top: 0.5em;
+  border-radius: 1em;
+  background: rgb(225, 233, 245);
+}
+
+@container (max-width: 240px) {
+  .mini {
+    font-size: 4.6cqi;
+    gap: 1.2em;
+    padding: 1.2em;
+  }
+
+  .mini-nav span {
+    display: none;
+  }
+
+  .mini-hero,
+  .mini-cards {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* ---------- 2. Data analysis report ---------- */
+.report {
+  display: grid;
+  gap: 1em;
+  padding: 1.3em;
+}
+
+.report-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1em;
+}
+
+.report-head b {
+  font-family: "Plus Jakarta Sans", "Segoe UI", Arial, sans-serif;
+  font-size: 1.25em;
+}
+
+.report-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  gap: 1em;
+}
+
+.report-card {
+  padding: 1em;
+  border: 1px solid rgba(120, 170, 255, 0.09);
+  border-radius: 0.8em;
+  background: rgba(255, 255, 255, 0.03);
+  min-width: 0;
+}
+
+.report-card small {
+  color: rgb(154, 175, 204);
+}
+
+.line-chart {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: 0.6em;
+}
+
+.line-chart .area {
+  fill: rgba(47, 107, 255, 0.25);
+}
+
+.line-chart .line {
+  fill: none;
+  stroke: rgb(77, 184, 255);
+  stroke-width: 2.5;
+  stroke-linejoin: round;
+}
+
+.line-chart .point {
+  fill: rgb(255, 255, 255);
+}
+
+.donut {
+  width: 6.5em;
+  aspect-ratio: 1;
+  margin: 0.8em auto;
+  border-radius: 50%;
+  background: conic-gradient(rgb(47, 107, 255) 0 46%, rgb(77, 184, 255) 46% 74%, rgb(61, 220, 151) 74% 88%, rgba(120, 170, 255, 0.22) 88% 100%);
+  -webkit-mask: radial-gradient(circle, transparent 54%, rgb(0, 0, 0) 55%);
+  mask: radial-gradient(circle, transparent 54%, rgb(0, 0, 0) 55%);
+}
+
+.legend {
+  display: grid;
+  gap: 0.35em;
+  font-size: 0.9em;
+  color: rgb(154, 175, 204);
+}
+
+.legend li {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.legend i {
+  flex: none;
+  width: 0.7em;
+  height: 0.7em;
+  border-radius: 0.2em;
+}
+
+.insights {
+  display: grid;
+  gap: 0.45em;
+}
+
+.insights li {
+  display: flex;
+  align-items: center;
+  gap: 0.7em;
+  padding: 0.65em 0.8em;
+  border: 1px solid rgba(120, 170, 255, 0.09);
+  border-radius: 0.6em;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.insights b {
+  margin-left: auto;
+  font-family: "JetBrains Mono", ui-monospace, Consolas, monospace;
+}

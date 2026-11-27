@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Software Integration &amp; Consulting | TechNova</title>
+  <meta name="description" content="TechNova connects the tools you already use, from Mobile Money to enterprise systems, and advises on what to build next.">
+  <meta name="theme-color" content="rgb(248, 251, 255)">
+
+  <!-- Lets the CSS know JavaScript is running, so scroll-in animations can start hidden -->
+  <script>document.documentElement.classList.add('js');</script>
+
+  <!-- Search and social sharing. Replace technova.example with your real web address. -->
+  <link rel="canonical" href="https://www.technova.example/integration.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Software Integration &amp; Consulting | TechNova">
+  <meta property="og:description" content="TechNova connects the tools you already use, from Mobile Money to enterprise systems, and advises on what to build next.">
+  <meta property="og:url" content="https://www.technova.example/integration.html">
+  <meta property="og:image" content="https://www.technova.example/images/hero/office-systems.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;700&display=swap">
+
+  <!-- Styles (responsive.css last, so its phone rules win) -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/mockups.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <!-- Scripts: company details and lists first, then the code that uses them -->
+  <script src="js/config.js" defer></script>
+  <script src="js/team.js" defer></script>
+  <script src="js/mockups.js" defer></script>
+  <script src="js/layout.js" defer></script>
+  <script src="js/sections.js" defer></script>
+  <script src="js/ui.js" defer></script>
+</head>
+<body data-page="integration">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Header and footer are drawn by js/layout.js from js/config.js -->
+  <header class="site-header" id="site-header"></header>
+
+  <main id="main">
+    <!-- ================= PAGE HEADING ================= -->
+    <section class="intro">
+      <div class="wrap intro-grid">
+        <div class="intro-text">
+          <p class="label">Software Integration &amp; Consulting</p>
+          <p class="lead">When the same data is typed into three systems, mistakes follow. We connect your tools so information moves on its own.</p>
+          <h1 class="mega">Your tools should<span class="sr-only"> talk, share data and work as one.</span></h1>
+          <div class="cycle" aria-hidden="true">
+            <div class="stack" data-cycle>
+              <span class="cycle-word is-active">talk.</span>
+              <span class="cycle-word">share data.</span>
+              <span class="cycle-word">work as one.</span>
+            </div>
+          </div>
+          <div class="btn-row">
+            <a class="btn btn-primary" href="contact.html">Start a Project</a>
+            <a class="btn btn-ghost" href="#journey">Our process</a>
+          </div>
+        </div>
+        <figure class="photo reveal"><img src="images/photos/server-room-review.jpg" alt="Two colleagues reviewing a tablet in a server room"></figure>
+      </div>
+    </section>
+
+    <!-- ================= PROCESS (scrolls sideways) ================= -->
+    <section class="journey" id="journey">
+      <div class="wrap journey-head">
+        <h2>Silos &rarr; one flow.</h2>
+        <div class="journey-tools">
+          <p class="label">Our process / 06</p>
+          <button class="round-btn" type="button" data-scroll="prev" aria-controls="steps-integration" aria-label="Previous step"><svg viewBox="0 0 12 12" width="12" height="12" aria-hidden="true"><path d="M8 1L3 6l5 5" fill="none" stroke="currentColor" stroke-width="2"/></svg></button>
+          <button class="round-btn" type="button" data-scroll="next" aria-controls="steps-integration" aria-label="Next step"><svg viewBox="0 0 12 12" width="12" height="12" aria-hidden="true"><path d="M4 1l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2"/></svg></button>
+        </div>
+      </div>
+      <div class="hscroll" id="steps-integration" tabindex="0" aria-label="Process steps">
+          <article class="step">
+            <p class="label">01 / Audit</p>
+            <div><h3>Inventory.</h3><p>We list every tool you use and every place data is typed in twice.</p></div>
+          </article>
+          <article class="step">
+            <p class="label">02 / Design</p>
+            <div><h3>Connect.</h3><p>We design how data should flow between systems, and who owns it.</p></div>
+          </article>
+          <article class="step">
+            <p class="label">03 / Build</p>
+            <div><h3>Integrate.</h3><p>APIs, webhooks and connectors are built and secured.</p></div>
+          </article>
+          <article class="step">
+            <p class="label">04 / Testing</p>
+            <div><h3>Verify.</h3><p>Every sync is tested with real records and failure cases.</p></div>
+          </article>
+          <article class="step">
+            <p class="label">05 / Rollout</p>
+            <div><h3>Switch.</h3><p>Integrations go live in stages, so daily work is never interrupted.</p></div>
+          </article>
+          <article class="step">
+            <p class="label">06 / Monitoring</p>
+            <div><h3>Watch.</h3><p>Alerts flag any failed sync so it is fixed before it costs you.</p></div>
+          </article>
+      </div>
+    </section>
+
+    <!-- ================= WHAT YOU GET ================= -->
+    <section class="section">
+      <div class="wrap feature-split">
+        <div class="frame reveal" data-mockup="integration"></div>
+        <div class="feature-text">
+          <p class="label">What you get</p>
+          <h2 class="h2">Your tools, <span class="hl">finally talking.</span></h2>
+          <p>We connect the software you already pay for, so data is entered once and appears everywhere it is needed.</p>
+          <ul class="ticks">
+            <li><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="9" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M6 10.5l2.6 2.6L14 7.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Mobile Money and bank payment connections</span></li>
+            <li><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="9" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M6 10.5l2.6 2.6L14 7.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Accounting and inventory sync</span></li>
+            <li><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="9" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M6 10.5l2.6 2.6L14 7.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>SMS and email notifications</span></li>
+            <li><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="9" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M6 10.5l2.6 2.6L14 7.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Secure APIs for partners and apps</span></li>
+            <li><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="9" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M6 10.5l2.6 2.6L14 7.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Data migration from old systems</span></li>
+            <li><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="9" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M6 10.5l2.6 2.6L14 7.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Written documentation for every integration</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= OTHER SERVICES (from js/config.js) ================= -->
+    <section class="section section-alt">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="label">More solutions</p>
+          <h2 class="h2">Combine it with</h2>
+        </div>
+        <div class="cap-grid" data-services="cards" data-exclude="integration.html"></div>
+      </div>
+    </section>
+
+    <!-- ================= CALL TO ACTION ================= -->
+    <section class="cta">
+      <div class="wrap">
+        <h2 class="mega">You bring the goal.<br><span class="hl">We&rsquo;ll connect the pieces.</span></h2>
+        <a class="orb" href="contact.html">Start your project &#8599;</a>
+        <p class="cta-note">Or call <a data-contact="phone"></a> &middot; <a data-contact="whatsapp" target="_blank" rel="noopener">Chat on WhatsApp</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="site-footer"></footer>
+</body>
+</html>

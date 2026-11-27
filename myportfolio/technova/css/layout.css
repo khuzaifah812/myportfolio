@@ -1,0 +1,553 @@
+/* =========================================================
+   TechNova — css/layout.css
+   The page frame: scroll progress bar, header and menu,
+   sections, page headings, call-to-action band, footer and
+   the floating WhatsApp and back-to-top buttons.
+   ========================================================= */
+
+/* ---------- 1. Scroll progress bar (top of the screen) ---------- */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 70;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, rgb(14, 116, 230), rgb(77, 171, 255));
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+}
+
+/* ---------- 2. Header ---------- */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  padding-top: env(safe-area-inset-top, 0px);
+  transition: box-shadow 0.3s;
+}
+
+/* Frosted white bar that appears once the page scrolls */
+.site-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.82);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(14, 60, 120, 0.08);
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+
+.site-header.is-scrolled::before {
+  opacity: 1;
+}
+
+.site-header.is-scrolled {
+  box-shadow: 0 10px 30px rgba(14, 60, 120, 0.06);
+}
+
+.header-inner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  min-height: 84px;
+}
+
+/* Logo: the shield icon (an image) next to the name written as text */
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: rgb(13, 50, 105);
+  text-decoration: none;
+}
+
+.logo-mark {
+  flex: none;
+  display: block;
+  height: auto;
+  transition: transform 0.4s;
+}
+
+.logo:hover .logo-mark {
+  transform: rotate(-8deg) scale(1.06);
+}
+
+.logo-text {
+  display: grid;
+  line-height: 1;
+}
+
+.logo-word {
+  font: 800 1.35rem "Plus Jakarta Sans", "Segoe UI", Arial, sans-serif;
+  letter-spacing: 0.03em;
+}
+
+.logo-tag {
+  margin-top: 5px;
+  font: 600 0.6rem "Plus Jakarta Sans", "Segoe UI", Arial, sans-serif;
+  letter-spacing: 0.34em;
+  color: rgb(14, 116, 230);
+}
+
+/* ---------- 3. Menu ---------- */
+.nav-pill {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px;
+  border: 1px solid rgba(14, 60, 120, 0.1);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.85);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 10px 30px rgba(14, 60, 120, 0.08);
+}
+
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0.7rem 1.15rem;
+  border: 0;
+  border-radius: 999px;
+  background: none;
+  color: rgb(8, 27, 54);
+  font: 600 0.92rem/1 "Plus Jakarta Sans", "Segoe UI", Arial, sans-serif;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.nav-link:hover {
+  background: rgb(234, 244, 255);
+  color: rgb(14, 116, 230);
+}
+
+.nav-link.is-active,
+.nav-link.is-active:hover {
+  background: linear-gradient(135deg, rgb(14, 116, 230), rgb(56, 150, 246));
+  color: rgb(255, 255, 255);
+}
+
+.nav-link svg {
+  transition: transform 0.2s;
+}
+
+/* Dropdowns (Solutions, Company) */
+.has-drop {
+  position: relative;
+}
+
+.drop {
+  position: absolute;
+  top: calc(100% + 12px);
+  left: 50%;
+  min-width: 260px;
+  padding: 10px;
+  border: 1px solid rgba(14, 60, 120, 0.1);
+  border-radius: 20px;
+  background: rgb(255, 255, 255);
+  box-shadow: 0 24px 60px rgba(14, 60, 120, 0.16);
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(-50%, 8px);
+  transition: opacity 0.2s, transform 0.2s, visibility 0s 0.2s;
+}
+
+/* Invisible bridge so the menu stays open while the pointer moves down to it */
+.drop::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -14px;
+  height: 14px;
+}
+
+.has-drop.is-open .drop {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, 0);
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.has-drop.is-open .drop-btn svg {
+  transform: rotate(180deg);
+}
+
+.drop a {
+  display: block;
+  padding: 0.7rem 1rem;
+  border-radius: 12px;
+  color: rgb(52, 71, 99);
+  font-size: 0.93rem;
+  line-height: 1.35;
+  text-decoration: none;
+  transition: background-color 0.2s, color 0.2s, padding-left 0.2s;
+}
+
+.drop a:hover,
+.drop a[aria-current="page"] {
+  padding-left: 1.3rem;
+  background: rgb(234, 244, 255);
+  color: rgb(14, 116, 230);
+}
+
+/* Mobile menu button (shown on small screens, see responsive.css) */
+.menu-toggle {
+  display: none;
+  align-items: center;
+  gap: 10px;
+  min-height: 46px;
+  padding: 0.6rem 1.1rem;
+  border: 1px solid rgba(14, 60, 120, 0.14);
+  border-radius: 999px;
+  background: rgb(255, 255, 255);
+  color: rgb(8, 27, 54);
+  font: 700 0.9rem "Plus Jakarta Sans", "Segoe UI", Arial, sans-serif;
+  cursor: pointer;
+}
+
+.bars {
+  display: grid;
+  gap: 5px;
+  width: 18px;
+}
+
+.bars i {
+  display: block;
+  height: 2px;
+  border-radius: 2px;
+  background: currentColor;
+  transition: transform 0.25s;
+}
+
+.menu-toggle[aria-expanded="true"] .bars i:first-child {
+  transform: translateY(3.5px) rotate(45deg);
+}
+
+.menu-toggle[aria-expanded="true"] .bars i:last-child {
+  transform: translateY(-3.5px) rotate(-45deg);
+}
+
+/* ---------- 4. Sections ---------- */
+.section {
+  padding-block: clamp(72px, 10vw, 120px);
+}
+
+.section-alt {
+  background: rgb(237, 246, 255);
+}
+
+.section-head {
+  display: grid;
+  justify-items: start;
+  gap: 16px;
+  max-width: 760px;
+  margin-bottom: clamp(40px, 6vw, 64px);
+}
+
+.section-head.center {
+  justify-items: center;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.center-link {
+  margin-top: clamp(32px, 5vw, 48px);
+  text-align: center;
+}
+
+/* ---------- 5. Page headings (inner pages) ---------- */
+.page-hero {
+  position: relative;
+  padding-block: clamp(150px, 18vw, 200px) clamp(64px, 9vw, 104px);
+  overflow: hidden;
+  isolation: isolate;
+  background:
+    radial-gradient(45% 60% at 85% 10%, rgba(77, 171, 255, 0.28), transparent 70%),
+    radial-gradient(40% 55% at 0% 100%, rgba(14, 116, 230, 0.12), transparent 70%),
+    linear-gradient(rgb(255, 255, 255), rgb(240, 247, 255));
+}
+
+.page-hero .wrap {
+  display: grid;
+  justify-items: start;
+  gap: 24px;
+}
+
+.page-hero.center .wrap {
+  justify-items: center;
+  text-align: center;
+}
+
+.page-hero.center .lead {
+  margin-inline: auto;
+}
+
+.page-hero.center .btn-row {
+  justify-content: center;
+}
+
+/* ---------- 6. Call-to-action band ---------- */
+.cta {
+  position: relative;
+  padding-block: clamp(88px, 12vw, 140px);
+  overflow: hidden;
+  isolation: isolate;
+  text-align: center;
+  background: linear-gradient(135deg, rgb(10, 92, 196), rgb(14, 116, 230) 45%, rgb(77, 171, 255));
+  color: rgb(255, 255, 255);
+}
+
+/* Two soft glowing circles that drift slowly behind the text */
+.cta::before,
+.cta::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.22), transparent 70%);
+  animation: drift 14s ease-in-out infinite alternate;
+}
+
+.cta::before {
+  width: 520px;
+  height: 520px;
+  left: -160px;
+  top: -200px;
+}
+
+.cta::after {
+  width: 440px;
+  height: 440px;
+  right: -120px;
+  bottom: -220px;
+  animation-delay: -7s;
+}
+
+@keyframes drift {
+  to {
+    translate: 60px 40px;
+  }
+}
+
+.cta h2 {
+  max-width: 13em;
+  margin-inline: auto;
+  color: rgb(255, 255, 255);
+}
+
+.cta .hl {
+  color: rgb(207, 232, 255);
+}
+
+.orb {
+  display: grid;
+  place-items: center;
+  width: 176px;
+  height: 176px;
+  margin: 48px auto 0;
+  padding: 24px;
+  border-radius: 50%;
+  background: rgb(255, 255, 255);
+  color: rgb(14, 116, 230);
+  font: 800 1rem/1.3 "Plus Jakarta Sans", "Segoe UI", Arial, sans-serif;
+  text-align: center;
+  text-decoration: none;
+  animation: ring 2.8s ease-out infinite;
+  transition: transform 0.3s;
+}
+
+.orb:hover {
+  transform: scale(1.08) rotate(-4deg);
+}
+
+@keyframes ring {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.55);
+  }
+
+  100% {
+    box-shadow: 0 0 0 44px rgba(255, 255, 255, 0);
+  }
+}
+
+.cta-note {
+  margin-top: 28px;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.cta-note a {
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+}
+
+/* ---------- 7. Footer ---------- */
+.site-footer {
+  padding-top: clamp(56px, 8vw, 88px);
+  background: rgb(7, 24, 48);
+  color: rgb(170, 190, 216);
+  font-size: 0.95rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr repeat(4, minmax(0, 1fr));
+  gap: 36px;
+}
+
+.footer-brand {
+  display: grid;
+  align-content: start;
+  justify-items: start;
+  gap: 16px;
+}
+
+.site-footer .logo {
+  color: rgb(255, 255, 255);
+}
+
+.site-footer .logo-mark {
+  filter: brightness(1.35) drop-shadow(0 0 6px rgba(77, 171, 255, 0.35));
+}
+
+.site-footer .logo-tag {
+  color: rgb(120, 190, 255);
+}
+
+.footer-motto {
+  font: 700 1rem/1.5 "Plus Jakarta Sans", "Segoe UI", Arial, sans-serif;
+  color: rgb(255, 255, 255);
+}
+
+.site-footer h3 {
+  margin-bottom: 16px;
+  font-size: 1rem;
+  color: rgb(255, 255, 255);
+}
+
+.site-footer ul {
+  display: grid;
+  gap: 10px;
+}
+
+.site-footer a {
+  color: rgb(170, 190, 216);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.site-footer a:hover {
+  color: rgb(120, 190, 255);
+}
+
+.footer-contact li {
+  overflow-wrap: anywhere;
+}
+
+.footer-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 56px;
+  padding-block: 22px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.85rem;
+}
+
+/* ---------- 8. Floating buttons (WhatsApp and back to top) ---------- */
+.wa-float {
+  position: fixed;
+  right: max(20px, env(safe-area-inset-right, 0px));
+  bottom: max(20px, env(safe-area-inset-bottom, 0px));
+  z-index: 60;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px;
+  border-radius: 999px;
+  background: rgb(37, 211, 102);
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  box-shadow: 0 14px 32px rgba(37, 211, 102, 0.4);
+  animation: wa-pulse 2.6s ease-out infinite;
+  transition: transform 0.25s;
+}
+
+.wa-float:hover {
+  transform: translateY(-3px);
+}
+
+.wa-float svg {
+  flex: none;
+  width: 40px;
+  height: 40px;
+}
+
+.wa-float span {
+  max-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  font: 700 0.92rem "Plus Jakarta Sans", "Segoe UI", Arial, sans-serif;
+  color: rgb(5, 46, 22);
+  transition: max-width 0.35s ease, padding 0.35s ease;
+}
+
+.wa-float:hover span,
+.wa-float:focus-visible span {
+  max-width: 180px;
+  padding-right: 12px;
+}
+
+@keyframes wa-pulse {
+  0% {
+    box-shadow: 0 14px 32px rgba(37, 211, 102, 0.4), 0 0 0 0 rgba(37, 211, 102, 0.5);
+  }
+
+  100% {
+    box-shadow: 0 14px 32px rgba(37, 211, 102, 0.4), 0 0 0 20px rgba(37, 211, 102, 0);
+  }
+}
+
+.to-top {
+  position: fixed;
+  right: max(28px, calc(env(safe-area-inset-right, 0px) + 8px));
+  bottom: max(92px, calc(env(safe-area-inset-bottom, 0px) + 72px));
+  z-index: 60;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(14, 60, 120, 0.12);
+  border-radius: 50%;
+  background: rgb(255, 255, 255);
+  color: rgb(14, 116, 230);
+  box-shadow: 0 10px 24px rgba(14, 60, 120, 0.15);
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px);
+  transition: opacity 0.3s, transform 0.3s, visibility 0s 0.3s;
+}
+
+.to-top.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.to-top:hover {
+  background: rgb(14, 116, 230);
+  color: rgb(255, 255, 255);
+}
