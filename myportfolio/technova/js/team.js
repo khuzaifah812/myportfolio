@@ -44,9 +44,9 @@ TechNova.team = [
     visible: true
   },
   {
-    name: 'Emilly Nakasanga',
+    name: 'Emilly Nabasinga',
     role: 'Data Analyst',
-    photo: 'images/team/emilly-nakasanga.jpg',
+    photo: 'images/team/emillyNabasinga.jpeg',
     linkedin: '',
     visible: true
   },
